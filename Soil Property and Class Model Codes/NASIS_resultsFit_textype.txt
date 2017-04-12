@@ -1,0 +1,170 @@
+Results of model fitting 'randomForest':
+
+Variable: SPCS classes
+
+ Random forest model:Ranger result
+
+Call:
+ ranger::ranger(formulaString, data = x, importance = "impurity",      write.forest = TRUE, probability = TRUE, num.trees = 85,      mtry = t.mrfX$bestTune$mtry) 
+
+Type:                             Probability estimation 
+Number of trees:                  85 
+Sample size:                      307041 
+Number of independent variables:  223 
+Mtry:                             10 
+Target node size:                 10 
+Variable importance mode:         impurity 
+OOB prediction error:             0.3510904 
+
+ Variable importance:
+                                             [,1]
+DEMNED6                                2873.20376
+P05PRI5                                2723.88109
+P08PRI5                                2699.57754
+P09PRI5                                2674.14705
+VDPNED6                                2612.82844
+VBFNED6                                2611.84231
+P07PRI5                                2596.39631
+P06PRI5                                2573.50491
+P10PRI5                                2561.23090
+T01PRI5                                2524.36958
+TNMPRI5                                2505.93407
+EX4MOD5                                2473.01108
+P04PRI5                                2463.77288
+T12PRI5                                2439.92560
+P03PRI5                                2424.89530
+T02PRI5                                2398.89076
+P12PRI5                                2393.64129
+P11PRI5                                2374.02954
+P02PRI5                                2373.11369
+P01PRI5                                2367.67898
+MANMCF5                                2354.51926
+C07MCF5                                2329.58247
+C11MCF5                                2320.16735
+C09MCF5                                2313.25343
+C10MCF5                                2301.83665
+C01MCF5                                2291.78355
+C03MCF5                                2282.93356
+C08MCF5                                2273.59128
+C12MCF5                                2262.13607
+C02MCF5                                2252.58387
+T06PRI5                                2248.76662
+VDCNED6                                2240.26646
+T05PRI5                                2228.09111
+ES4MOD5                                2224.53598
+C05MCF5                                2202.44166
+C06MCF5                                2176.65204
+C04MCF5                                2174.58781
+PWRMCL5                                2168.07988
+T04PRI5                                2157.63852
+T09PRI5                                2157.38263
+ES3MOD5                                2154.11615
+EX3MOD5                                2146.26951
+T11PRI5                                2145.15451
+TWETCL5                                2140.90058
+T07PRI5                                2114.91834
+T03PRI5                                2078.09309
+POSNED6                                2073.75804
+ES5MOD5                                2043.49029
+SLPNED6                                2039.43341
+TWRMCL5                                2032.45138
+EX1MOD5                                2024.98474
+T10PRI5                                2007.86554
+EX5MOD5                                2003.61237
+ES2MOD5                                1989.57926
+T08PRI5                                1988.96339
+TMTPRI5                                1975.00372
+EX6MOD5                                1960.64377
+CSCMCF5                                1927.52733
+EX2MOD5                                1922.60077
+TPINED6                                1913.52688
+DVMNED6                                1901.96899
+ES6MOD5                                1808.06335
+ES1MOD5                                1799.26390
+NEGNED6                                1793.48310
+GEXMRD3                                1791.58340
+PCLQCL5                                1784.26172
+ADIUCL5                                1773.18593
+PDRYCL5                                1758.00298
+PWETCL5                                1746.78650
+TCLDCL5                                1715.03234
+TDRYCL5                                1690.24124
+DRNGSS7Excessive                       1651.06682
+NIRL00                                 1625.05321
+NIRL14                                 1593.12659
+SW1L00                                 1587.11653
+PSESCL5                                1540.33855
+SW1L14                                 1538.76984
+REDL00                                 1446.83618
+REDL14                                 1427.15495
+SW2L00                                 1351.56655
+SW2L14                                 1312.21693
+PDRSCL5                                1298.27727
+T06MOD3                                1148.46986
+PMTGSS7Eolian.Deposits..nonvolcanic.   1129.94334
+T05MOD3                                1096.88969
+BARL10                                 1089.30775
+T09MOD3                                1084.37238
+CRVNED6                                1071.28277
+T10MOD3                                1059.04798
+MRNNED6                                1057.92960
+T07MOD3                                1034.19798
+T02MOD3                                1012.36622
+GTHMRD3                                 976.55760
+T08MOD3                                 967.26449
+T04MOD3                                 944.93926
+T01MOD3                                 940.87624
+T11MOD3                                 937.98314
+DRNGSS7Well.drained                     915.16625
+PMTGSS7Basal.till                       902.87047
+T12MOD3                                 891.14640
+N08MOD3                                 873.51237
+T03MOD3                                 866.31006
+N04MOD3                                 858.13626
+N12MOD3                                 852.48210
+N01MOD3                                 840.36261
+PMTGSS7Alluvium                         831.84710
+N02MOD3                                 828.57521
+N10MOD3                                 790.69363
+N05MOD3                                 783.45845
+N11MOD3                                 740.19935
+N06MOD3                                 730.06225
+TREL10                                  724.42513
+N03MOD3                                 718.26080
+N07MOD3                                 706.92044
+N09MOD3                                 647.76902
+PMTGSS7Residuum...Slope.Alluvium        578.87764
+DRNGSS7Poor                             530.24168
+GU0MRD3                                 428.69732
+PMTGSS7Eolian.sands                     389.24960
+PVEGKT6NORTHERN.HARDWOODS               312.16866
+GK0MRD3                                 263.02596
+PMTGSS7Colluvium                        226.49068
+NLCD116Cultivated.Crops                 216.21372
+NLCD116Grassland                        141.71942
+PMTGSS7Outwash                          133.14481
+PVEGKT6TALL.GRASS.PRAIRIE               132.17972
+NLCD116Shrub                            122.41526
+PMTGSS7Glaciofluvial.deposits           120.60084
+DRNGSS7Subaqueous                       115.30137
+PMTGSS7NULL                             114.38233
+PVEGKT6EASTERN.HARDWOOD.FOREST          109.07778
+NLCD116Pasture                          108.09759
+PMTGSS7Glaciolacustrine.deposits        104.80163
+NLCD116Woody.Wetlands                   101.96677
+PMTGSS7Coal.extraction.mine.spoil       100.25381
+PVEGKT6NORTHERN.CONIFER.FOREST           96.40741
+NLCD116Developed.Open.Space              91.33755
+NLCD116Deciduous.Forest                  90.52362
+PVEGKT6FLOODPLAIN.FORESTS                86.45435
+PVEGKT6SHORTGRASS.PRAIRIE                85.03529
+PMTGSS7Lodgment.till                     82.02221
+PVEGKT6TALL.GRASS.SAVANNA                81.65930
+PMTGSS7Lacustrine.deposits               72.86506
+NLCD116Evergreen.Forest                  72.21237
+PMTGSS7Fluviomarine.deposits             71.10128
+PMTGSS7Marine.deposits                   70.87766
+PVEGKT6ROCKY.MTN.CONIFER.FOREST          59.23589
+PMTGSS7Herbaceous.organic.material       57.99532
+PVEGKT6SOUTHERN.MIXED.FOREST             53.27976
+PVEGKT6SOUTHEASTERN.SUBTROPICAL.FOREST   50.27017
