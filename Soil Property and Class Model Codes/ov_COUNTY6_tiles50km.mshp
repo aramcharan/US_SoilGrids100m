@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.3.0">
+    <MODULE library="shapes_grid" id="2" name="Grid Statistics for Polygons">
+      <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+        <CELLSIZE>100</CELLSIZE>
+        <XMIN>-2539950</XMIN>
+        <XMAX>2440950</XMAX>
+        <YMIN>119050</YMIN>
+        <YMAX>3257950</YMAX>
+      </OPTION>
+      <OPTION type="choice" id="NAMING" name="Field Naming" index="1">grid name</OPTION>
+      <OPTION type="choice" id="METHOD" name="Method" index="0">simple and fast</OPTION>
+      <OPTION type="boolean" id="COUNT" name="Number of Cells">TRUE</OPTION>
+      <OPTION type="boolean" id="MIN" name="Minimum">TRUE</OPTION>
+      <OPTION type="boolean" id="MAX" name="Maximum">TRUE</OPTION>
+      <OPTION type="boolean" id="RANGE" name="Range">TRUE</OPTION>
+      <OPTION type="boolean" id="SUM" name="Sum">TRUE</OPTION>
+      <OPTION type="boolean" id="MEAN" name="Mean">TRUE</OPTION>
+      <OPTION type="boolean" id="VAR" name="Variance">TRUE</OPTION>
+      <OPTION type="boolean" id="STDDEV" name="Standard Deviation">TRUE</OPTION>
+      <OPTION type="integer" id="QUANTILE" name="Quantile">0</OPTION>
+      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+        <COUNTY6 type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+          <FILE>/data/USA48/COUNTY6.sgrd</FILE>
+        </COUNTY6>
+      </INPUT_LIST>
+      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+        <FILE>tiles50km.shp</FILE>
+      </INPUT>
+      <OUTPUT type="shapes" id="RESULT" name="Statistics">tiles50km [Grid Statistics]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE></FILE>
+    <DATABASE>
+      <FIELDS>
+        <FIELD TYPE="DOUBLE">xl</FIELD>
+        <FIELD TYPE="DOUBLE">yl</FIELD>
+        <FIELD TYPE="DOUBLE">xu</FIELD>
+        <FIELD TYPE="DOUBLE">yu</FIELD>
+        <FIELD TYPE="DOUBLE">offst_y</FIELD>
+        <FIELD TYPE="DOUBLE">offst_x</FIELD>
+        <FIELD TYPE="DOUBLE">rgn_dm_y</FIELD>
+        <FIELD TYPE="DOUBLE">rgn_dm_x</FIELD>
+        <FIELD TYPE="STRING">ID</FIELD>
+        <FIELD TYPE="INTEGER">COUNTY6 [CELLS]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [MIN]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [MAX]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [RANGE]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [SUM]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [MEAN]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [VARIANCE]</FIELD>
+        <FIELD TYPE="DOUBLE">COUNTY6 [STDDEV]</FIELD>
+      </FIELDS>
+    </DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["Albers",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Albers"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_origin",23],PARAMETER["central_meridian",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]
+</OGC_WKT>
+      <PROJ4>+proj=aea +a=6378137.000000 +b=6356752.314140 +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>
