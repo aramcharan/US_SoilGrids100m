@@ -1,0 +1,170 @@
+Results of model fitting 'randomForest':
+
+Variable: USDA Great Group
+
+ Random forest model:Ranger result
+
+Call:
+ ranger::ranger(formulaString, data = x, importance = "impurity",      write.forest = TRUE, probability = TRUE, num.trees = 85,      mtry = 30) 
+
+Type:                             Probability estimation 
+Number of trees:                  85 
+Sample size:                      325215 
+Number of independent variables:  223 
+Mtry:                             30 
+Target node size:                 10 
+Variable importance mode:         impurity 
+OOB prediction error:             0.4000948 
+
+ Variable importance:
+                                           [,1]
+P04PRI5                              3898.51853
+P06PRI5                              3699.44070
+VDPNED6                              3671.60158
+PWRMCL5                              3574.27388
+P09PRI5                              3538.97778
+P07PRI5                              3504.30256
+MANMCF5                              3461.50201
+DEMNED6                              3314.55444
+VDCNED6                              3305.40448
+EX4MOD5                              3254.45274
+P12PRI5                              3195.70519
+P08PRI5                              3194.67886
+P11PRI5                              3170.78102
+P01PRI5                              3132.92200
+P05PRI5                              3107.61753
+P10PRI5                              3079.42547
+C12MCF5                              3029.45684
+C07MCF5                              3006.65103
+EX3MOD5                              2971.58760
+VBFNED6                              2970.80270
+P02PRI5                              2948.50076
+C05MCF5                              2936.27625
+C01MCF5                              2925.84389
+C11MCF5                              2908.60320
+C06MCF5                              2884.17369
+C08MCF5                              2867.36920
+EX5MOD5                              2867.09215
+T01PRI5                              2866.00824
+ES2MOD5                              2858.30852
+C10MCF5                              2846.84227
+C09MCF5                              2838.56089
+P03PRI5                              2833.77649
+EX1MOD5                              2831.99229
+C02MCF5                              2831.23164
+T12PRI5                              2830.34803
+TNMPRI5                              2821.36866
+C03MCF5                              2814.16639
+DVMNED6                              2768.56139
+EX6MOD5                              2652.86473
+ES3MOD5                              2582.11850
+POSNED6                              2575.31926
+ES4MOD5                              2566.86186
+C04MCF5                              2558.31268
+EX2MOD5                              2557.53012
+TPINED6                              2526.09910
+T02PRI5                              2509.01493
+T06PRI5                              2482.83436
+PCLQCL5                              2463.82828
+T03PRI5                              2438.53400
+ES1MOD5                              2394.98738
+ES5MOD5                              2388.75109
+T11PRI5                              2386.52722
+ES6MOD5                              2362.28297
+TWETCL5                              2298.13662
+T04PRI5                              2297.64142
+T08PRI5                              2297.06318
+CSCMCF5                              2197.41009
+PSESCL5                              2176.36794
+T07PRI5                              2170.12330
+TDRYCL5                              2124.81344
+DRNGSS7Well.drained                  2118.76023
+T05PRI5                              2088.43046
+T09PRI5                              2073.44169
+PDRYCL5                              2063.80162
+T10PRI5                              2059.03182
+TCLDCL5                              2058.63262
+NEGNED6                              2020.73396
+PWETCL5                              2017.74226
+NIRL14                               2015.70784
+NIRL00                               2015.04501
+SW1L00                               1976.23018
+ADIUCL5                              1953.24735
+SW1L14                               1936.48785
+REDL00                               1922.79938
+TWRMCL5                              1890.93445
+PDRSCL5                              1877.59000
+TMTPRI5                              1871.47913
+T07MOD3                              1866.87017
+REDL14                               1861.62028
+GEXMRD3                              1853.98607
+SLPNED6                              1721.71234
+BARL10                               1537.04230
+SW2L00                               1535.27809
+SW2L14                               1517.01416
+PMTGSS7Alluvium                      1514.72451
+DRNGSS7Poor                          1508.75926
+T06MOD3                              1493.46358
+T05MOD3                              1353.80907
+PMTGSS7Eolian.Deposits..nonvolcanic. 1294.92157
+T08MOD3                              1277.36303
+CRVNED6                              1262.22142
+T09MOD3                              1168.85584
+T03MOD3                              1159.44463
+MRNNED6                              1155.12290
+T04MOD3                              1068.59692
+DRNGSS7Excessive                     1008.29410
+GTHMRD3                               944.49371
+TREL10                                906.42574
+T02MOD3                               903.71379
+T01MOD3                               897.99251
+T12MOD3                               869.57203
+T10MOD3                               854.52799
+T11MOD3                               813.16048
+N01MOD3                               781.32245
+N02MOD3                               750.57145
+N12MOD3                               694.41985
+N06MOD3                               631.21365
+N05MOD3                               605.47897
+N07MOD3                               594.66086
+N10MOD3                               593.43094
+N11MOD3                               593.07918
+N04MOD3                               582.81112
+N03MOD3                               569.40978
+PMTGSS7Residuum...Slope.Alluvium      528.83578
+N08MOD3                               517.10796
+N09MOD3                               506.26535
+PMTGSS7Eolian.sands                   407.34817
+DRNGSS7Subaqueous                     331.04693
+PMTGSS7Coal.extraction.mine.spoil     326.55140
+GU0MRD3                               302.20997
+PMTGSS7Basal.till                     238.43321
+GK0MRD3                               200.70551
+PVEGKT6EASTERN.HARDWOOD.FOREST        179.13278
+PMTGSS7Colluvium                      170.34931
+NLCD116Woody.Wetlands                 159.53418
+PVEGKT6TALL.GRASS.PRAIRIE             158.19923
+NLCD116Grassland                      158.08420
+NLCD116Cultivated.Crops               157.49608
+PMTGSS7Fluviomarine.deposits          139.78242
+PMTGSS7Marine.deposits                110.62376
+NLCD116Developed.Open.Space           109.08831
+PMTGSS7Herbaceous.organic.material    108.26437
+NLCD116Evergreen.Forest               107.36074
+NLCD116Shrub                          106.40332
+NLCD116Pasture                        103.29032
+PVEGKT6NORTHERN.CONIFER.FOREST        100.86236
+NLCD116Deciduous.Forest                98.37056
+PVEGKT6SHORTGRASS.PRAIRIE              96.61197
+PMTGSS7Mine.spoil.or.earthy.fill       91.58932
+PMTGSS7Glaciolacustrine.deposits       90.97919
+PMTGSS7Lacustrine.deposits             88.09580
+PVEGKT6TALL.GRASS.SAVANNA              79.43318
+PMTGSS7Drift                           79.33862
+PVEGKT6FLOODPLAIN.FORESTS              78.47079
+PMTGSS7NULL                            72.39823
+PVEGKT6SOUTHERN.MIXED.FOREST           71.72223
+PMTGSS7Glaciofluvial.deposits          71.35429
+PMTGSS7Rock.spread.deposits            65.75969
+PVEGKT6NORTHERN.HARDWOODS              65.57742
+PMTGSS7Outwash                         63.14741
