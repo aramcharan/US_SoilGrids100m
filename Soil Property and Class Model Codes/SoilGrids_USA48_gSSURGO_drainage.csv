@@ -1,0 +1,10 @@
+Value,Count,drainage_class,aggregate_class,Agg_Value,Alt_name
+1,"41,937,704",Somewhat excessively drained,Excessive,1,Excessively drained
+2,"525,277,747",Well drained,Well drained,2,Well drained
+3,"27,405,287",Excessively drained,Excessive,1,Excessively drained
+4,"92,536,389",Moderately well drained,Well drained,2,Well drained
+5,"60,696,011",Poorly drained,Poor,3,Poorly drained
+6,"62,559,861",Somewhat poorly drained,Poor,3,Poorly drained
+7,"1,382,659",NULL,NULL,4,
+8,"21,699,734",Very poorly drained,Subaqueous,5,Subaqueous
+9,"7,202",Subaqueous,Subaqueous,5,Subaqueous
