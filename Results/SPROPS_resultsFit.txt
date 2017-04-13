@@ -1,0 +1,2565 @@
+Results of model fitting 'randomForest / XGBoost':
+
+
+Variable: clay
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      189189 
+Number of independent variables:  225 
+Mtry:                             50 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             67.17533 
+R squared:                        0.7510187 
+
+ Variable importance:
+                                             [,1]
+sg_clay                              20243677.223
+DEPTH                                 2711625.920
+T09MOD3                                598186.525
+TWRMCL5                                586678.452
+DRNGSS7Excessive                       466522.412
+T03MOD3                                414637.817
+DEMNED6                                389915.678
+P05PRI5                                377278.950
+DVMNED6                                371728.943
+EX1MOD5                                367792.494
+TPINED6                                354425.269
+P09PRI5                                342926.705
+T06PRI5                                328580.871
+T04PRI5                                325628.992
+VDPNED6                                324979.809
+T05PRI5                                312734.869
+SW1L00                                 298257.481
+ES2MOD5                                296732.616
+C09MCF5                                291340.160
+VDCNED6                                290757.260
+VBFNED6                                287270.210
+EX6MOD5                                283710.237
+ES6MOD5                                281518.992
+EX3MOD5                                277552.776
+ES5MOD5                                275944.314
+P06PRI5                                275760.146
+ES3MOD5                                274288.401
+C07MCF5                                273478.688
+ES1MOD5                                272822.206
+ES4MOD5                                268934.736
+GEXMRD3                                267663.599
+C03MCF5                                265136.952
+POSNED6                                263043.698
+C11MCF5                                260121.365
+T04MOD3                                258869.306
+C08MCF5                                258772.573
+EX5MOD5                                256295.152
+P07PRI5                                255978.347
+C05MCF5                                251727.011
+C01MCF5                                250350.492
+P10PRI5                                248878.850
+T09PRI5                                248053.476
+C06MCF5                                246699.459
+P08PRI5                                246350.771
+EX2MOD5                                246167.021
+C10MCF5                                245279.008
+EX4MOD5                                242462.796
+TNMPRI5                                240011.127
+P04PRI5                                239480.044
+C02MCF5                                237439.071
+P11PRI5                                236597.111
+C12MCF5                                235728.140
+MANMCF5                                234879.243
+P03PRI5                                232377.413
+NIRL14                                 231079.030
+NEGNED6                                230912.063
+TWETCL5                                229774.756
+T08PRI5                                227475.947
+C04MCF5                                225437.007
+P02PRI5                                224763.766
+TMTPRI5                                221928.099
+NIRL00                                 220719.471
+PWETCL5                                218951.007
+T07PRI5                                218321.858
+P01PRI5                                217752.571
+ADIUCL5                                216700.475
+SW1L14                                 212479.454
+PMTGSS7Residuum...Slope.Alluvium       204935.494
+PWRMCL5                                203824.463
+P12PRI5                                201789.723
+CSCMCF5                                199055.806
+REDL00                                 196579.374
+T02PRI5                                195498.066
+PCLQCL5                                189854.886
+CRVNED6                                189115.105
+T01PRI5                                189090.222
+TREL10                                 174540.792
+PDRYCL5                                173785.044
+T12PRI5                                173085.316
+T10PRI5                                172736.508
+REDL14                                 172545.123
+SLPNED6                                171962.468
+T03PRI5                                169651.119
+TDRYCL5                                169485.676
+PDRSCL5                                163456.346
+PSESCL5                                162700.006
+T11PRI5                                150684.847
+GTHMRD3                                148305.673
+MRNNED6                                144412.156
+SW2L00                                 141383.928
+T05MOD3                                140227.510
+TCLDCL5                                139249.772
+SW2L14                                 129998.931
+T06MOD3                                127587.440
+T10MOD3                                114338.325
+T08MOD3                                 96307.237
+BARL10                                  90441.474
+T01MOD3                                 89903.138
+T02MOD3                                 87511.588
+PMTGSS7Alluvium                         86631.692
+N02MOD3                                 84777.949
+T07MOD3                                 82252.117
+N01MOD3                                 77569.359
+DRNGSS7Well.drained                     76960.406
+N12MOD3                                 73159.491
+T12MOD3                                 67130.233
+T11MOD3                                 65809.010
+N03MOD3                                 63687.671
+DRNGSS7Poor                             63229.770
+N11MOD3                                 62866.781
+PMTGSS7Eolian.sands                     61022.444
+N10MOD3                                 60487.986
+N04MOD3                                 57884.312
+N09MOD3                                 55186.091
+N05MOD3                                 53622.612
+N06MOD3                                 51327.408
+N07MOD3                                 50995.543
+N08MOD3                                 49909.602
+GU0MRD3                                 44688.166
+CHAGSW7                                 36900.733
+DRNGSS7Subaqueous                       36359.470
+PMTGSS7Lacustrine.deposits              28912.307
+PMTGSS7Eolian.Deposits..nonvolcanic.    27013.464
+GK0MRD3                                 26131.443
+OCCGSW7                                 25877.149
+PMTGSS7Glaciolacustrine.deposits        23213.188
+PMTGSS7NULL                             18425.722
+NLCD116Deciduous.Forest                 16734.002
+NLCD116Developed.Open.Space             15229.099
+NLCD116Pasture                          14983.291
+PVEGKT6EASTERN.HARDWOOD.FOREST          14486.822
+NLCD116Cultivated.Crops                 13501.934
+EXTGSW7                                 13413.966
+NLCD116Grassland                        12246.946
+PVEGKT6FLOODPLAIN.FORESTS               12048.944
+PVEGKT6SOUTHERN.MIXED.FOREST            11616.328
+NLCD116Woody.Wetlands                   11471.480
+PMTGSS7Colluvium                        11403.709
+NLCD116Developed.Low.Intensity          10680.759
+NLCD116Shrub                            10644.136
+NLCD116Evergreen.Forest                  9793.439
+PMTGSS7Outwash                           9201.312
+PMTGSS7Basal.till                        8328.035
+NLCD116Herbaceous.Wetlands               8285.644
+PVEGKT6TALL.GRASS.SAVANNA                7413.485
+NLCD116Mixed.Forest                      7166.200
+PVEGKT6TALL.GRASS.PRAIRIE                7135.026
+PMTGSS7Glaciomarine.deposits             7112.842
+PMTGSS7Glaciofluvial.deposits            6510.803
+PVEGKT6NORTHERN.HARDWOODS                6416.465
+
+eXtreme Gradient Boosting 
+
+189189 samples
+   225 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 126126, 126127, 126125 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared 
+  0.3  2           50      10.668953  0.5785569
+  0.3  2          100      10.529242  0.5893712
+  0.3  2          150      10.448144  0.5956730
+  0.3  3           50      10.453284  0.5954298
+  0.3  3          100      10.284949  0.6083339
+  0.3  3          150      10.160155  0.6177688
+  0.3  4           50      10.278447  0.6089016
+  0.3  4          100      10.053826  0.6257670
+  0.3  4          150       9.889474  0.6379324
+  0.4  2           50      10.629464  0.5814843
+  0.4  2          100      10.487672  0.5924960
+  0.4  2          150      10.402929  0.5990470
+  0.4  3           50      10.441165  0.5961593
+  0.4  3          100      10.247507  0.6109953
+  0.4  3          150      10.115389  0.6209547
+  0.4  4           50      10.189128  0.6155386
+  0.4  4          100       9.941009  0.6340197
+  0.4  4          150       9.766198  0.6468040
+  0.5  2           50      10.597369  0.5838448
+  0.5  2          100      10.459424  0.5946305
+  0.5  2          150      10.361600  0.6021795
+  0.5  3           50      10.368835  0.6016725
+  0.5  3          100      10.180444  0.6160056
+  0.5  3          150      10.045191  0.6261560
+  0.5  4           50      10.179781  0.6160810
+  0.5  4          100       9.923714  0.6351158
+  0.5  4          150       9.750373  0.6477687
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.5, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                              Feature         Gain        Cover    Frequency
+  1:                          sg_clay 7.707471e-01 9.842974e-02 0.0759610931
+  2:                          T09MOD3 1.236303e-02 9.281589e-03 0.0078740157
+  3:                 DRNGSS7Excessive 1.219828e-02 3.798503e-03 0.0046317740
+  4: PMTGSS7Residuum...Slope.Alluvium 1.191907e-02 6.258391e-03 0.0041685966
+  5:                            DEPTH 1.108223e-02 4.859481e-02 0.0597498842
+ ---                                                                        
+146:   NLCD116Developed.Low.Intensity 6.239400e-05 2.986445e-06 0.0004631774
+147:                   NLCD116Pasture 5.882899e-05 4.511734e-04 0.0009263548
+148:           PVEGKT6COASTAL.PRAIRIE 5.575431e-05 1.402449e-03 0.0004631774
+149:                      DRNGSS7NULL 4.830788e-05 2.993052e-04 0.0004631774
+150:      NLCD116Developed.Open.Space 4.280737e-05 1.124357e-03 0.0004631774
+--------------------------------------
+
+Variable: sand
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      189189 
+Number of independent variables:  225 
+Mtry:                             50 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             108.1501 
+R squared:                        0.852363 
+
+ Variable importance:
+                                            [,1]
+sg_sand                              58548986.41
+P05PRI5                               5714287.06
+DEPTH                                 3539487.89
+DRNGSS7Excessive                      2744314.45
+P04PRI5                               1873003.30
+TWRMCL5                               1817740.39
+P07PRI5                               1532688.66
+PMTGSS7Eolian.Deposits..nonvolcanic.  1323437.18
+DEMNED6                               1286909.82
+PWRMCL5                               1141333.18
+ES4MOD5                               1117680.63
+C03MCF5                               1103685.28
+T05PRI5                               1010649.21
+GEXMRD3                                940609.14
+GTHMRD3                                836453.35
+C10MCF5                                819427.96
+VBFNED6                                810760.69
+VDPNED6                                784751.05
+ES3MOD5                                779124.91
+T06PRI5                                776958.18
+C02MCF5                                773457.81
+T04PRI5                                767983.81
+C01MCF5                                760877.17
+ES2MOD5                                736230.86
+DVMNED6                                693542.55
+TNMPRI5                                692490.14
+EX1MOD5                                674516.36
+P06PRI5                                669237.32
+T07PRI5                                662489.73
+C09MCF5                                662091.32
+P09PRI5                                660871.23
+P08PRI5                                657890.19
+C06MCF5                                643808.09
+EX3MOD5                                639077.13
+T08PRI5                                635948.44
+P01PRI5                                628931.62
+P02PRI5                                626849.99
+TPINED6                                610033.78
+C12MCF5                                597296.34
+ES6MOD5                                581913.58
+NEGNED6                                576049.44
+EX6MOD5                                574707.29
+C11MCF5                                572926.69
+ES1MOD5                                566122.56
+C07MCF5                                564526.12
+EX4MOD5                                564442.48
+EX2MOD5                                560460.84
+TWETCL5                                551874.02
+C08MCF5                                550752.07
+ES5MOD5                                549450.89
+P10PRI5                                540172.75
+VDCNED6                                539221.54
+EX5MOD5                                539065.20
+C04MCF5                                528938.22
+P11PRI5                                522546.47
+P12PRI5                                513764.43
+C05MCF5                                512366.14
+ADIUCL5                                494546.98
+CSCMCF5                                493518.54
+T01PRI5                                492849.34
+NIRL00                                 488055.42
+NIRL14                                 484253.45
+POSNED6                                479913.39
+SW1L00                                 479081.84
+P03PRI5                                475748.03
+T09PRI5                                472048.30
+T12PRI5                                470252.65
+PMTGSS7Eolian.sands                    455572.71
+T02PRI5                                449881.42
+PSESCL5                                441314.95
+MANMCF5                                439949.72
+PCLQCL5                                431213.15
+T03PRI5                                428131.67
+SW1L14                                 423088.32
+PDRYCL5                                422410.84
+T10PRI5                                400746.04
+REDL00                                 397358.36
+TDRYCL5                                387856.79
+REDL14                                 380305.25
+DRNGSS7Poor                            370185.20
+T03MOD3                                369833.01
+PWETCL5                                365270.00
+DRNGSS7Well.drained                    365035.10
+NLCD116Cultivated.Crops                353291.90
+SLPNED6                                352709.69
+CRVNED6                                344388.07
+T11PRI5                                336138.72
+T02MOD3                                329518.44
+SW2L14                                 323602.08
+T04MOD3                                315417.27
+T09MOD3                                313452.58
+TCLDCL5                                305382.81
+TMTPRI5                                304476.59
+SW2L00                                 301309.36
+T06MOD3                                299096.27
+TREL10                                 291581.73
+MRNNED6                                289595.85
+PDRSCL5                                260132.08
+PMTGSS7Outwash                         242471.78
+BARL10                                 236674.18
+T05MOD3                                220592.29
+N01MOD3                                201408.93
+GU0MRD3                                192817.28
+N02MOD3                                175972.47
+T07MOD3                                175729.23
+N12MOD3                                174778.79
+T08MOD3                                167858.87
+N11MOD3                                165601.92
+T01MOD3                                160129.01
+PMTGSS7Basal.till                      146568.68
+T10MOD3                                145735.56
+T12MOD3                                141604.09
+PMTGSS7Alluvium                        140992.10
+N10MOD3                                139790.35
+N06MOD3                                127975.68
+T11MOD3                                126521.88
+N09MOD3                                123682.78
+N07MOD3                                120101.12
+N04MOD3                                119759.40
+N03MOD3                                115130.20
+N08MOD3                                112002.82
+N05MOD3                                110113.31
+PMTGSS7Glaciolacustrine.deposits       105692.33
+PMTGSS7Residuum...Slope.Alluvium        92923.73
+PMTGSS7Marine.deposits                  90022.78
+PVEGKT6EASTERN.HARDWOOD.FOREST          79964.57
+PMTGSS7Glaciofluvial.deposits           76960.11
+GK0MRD3                                 72621.67
+CHAGSW7                                 43911.06
+PVEGKT6TALL.GRASS.SAVANNA               40513.90
+PVEGKT6FLOODPLAIN.FORESTS               38517.12
+OCCGSW7                                 38145.99
+PMTGSS7Lacustrine.deposits              37590.71
+PMTGSS7NULL                             34534.97
+PVEGKT6TALL.GRASS.PRAIRIE               34268.59
+NLCD116Developed.Open.Space             32506.08
+NLCD116Pasture                          31911.45
+PVEGKT6SOUTHERN.MIXED.FOREST            31238.41
+NLCD116Deciduous.Forest                 31119.79
+PVEGKT6CALIFORNIA.CONIFER.FOREST        29158.48
+NLCD116Woody.Wetlands                   27646.80
+DRNGSS7Subaqueous                       27367.01
+NLCD116Grassland                        27246.74
+PVEGKT6NORTHERN.CONIFER.FOREST          23204.24
+PMTGSS7Fluviomarine.deposits            22332.78
+PMTGSS7Colluvium                        21196.61
+NLCD116Shrub                            20599.73
+EXTGSW7                                 19584.70
+NLCD116Developed.Low.Intensity          16899.31
+NLCD116Evergreen.Forest                 14104.09
+
+eXtreme Gradient Boosting 
+
+189189 samples
+   225 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 126126, 126126, 126126 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared 
+  0.3  2           50      15.61758  0.6674375
+  0.3  2          100      15.36431  0.6780167
+  0.3  2          150      15.21415  0.6842518
+  0.3  3           50      15.29410  0.6810040
+  0.3  3          100      14.97268  0.6942266
+  0.3  3          150      14.75703  0.7030111
+  0.3  4           50      14.89537  0.6974908
+  0.3  4          100      14.46645  0.7147268
+  0.3  4          150      14.17228  0.7262611
+  0.4  2           50      15.58301  0.6686651
+  0.4  2          100      15.33126  0.6792626
+  0.4  2          150      15.17020  0.6859733
+  0.4  3           50      15.13571  0.6875495
+  0.4  3          100      14.80816  0.7009108
+  0.4  3          150      14.56721  0.7105589
+  0.4  4           50      14.78370  0.7019373
+  0.4  4          100      14.31523  0.7205618
+  0.4  4          150      13.96779  0.7339885
+  0.5  2           50      15.56579  0.6693138
+  0.5  2          100      15.28277  0.6812283
+  0.5  2          150      15.11454  0.6882113
+  0.5  3           50      15.08737  0.6894133
+  0.5  3          100      14.73251  0.7038447
+  0.5  3          150      14.47087  0.7142889
+  0.5  4           50      14.66899  0.7064343
+  0.5  4          100      14.18985  0.7253231
+  0.5  4          150      13.84342  0.7385668
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.5, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                                  Feature         Gain        Cover   Frequency
+  1:                              sg_sand 7.673027e-01 1.056122e-01 0.068773234
+  2:                              P05PRI5 5.101038e-02 1.567665e-02 0.018587361
+  3:                     DRNGSS7Excessive 2.355514e-02 4.882718e-03 0.006970260
+  4: PMTGSS7Eolian.Deposits..nonvolcanic. 7.705720e-03 2.190035e-03 0.001394052
+  5:                              GTHMRD3 5.821079e-03 1.116883e-02 0.007434944
+ ---                                                                           
+146:                PVEGKT6DESERT.SAVANNA 8.421484e-05 2.802591e-04 0.000464684
+147:          NLCD116Developed.Open.Space 8.370617e-05 1.198129e-03 0.001394052
+148:                NLCD116Woody.Wetlands 8.191485e-05 6.007780e-04 0.000929368
+149:                         PMTGSS7Drift 7.753071e-05 2.985566e-05 0.000464684
+150:                          PMTGSS7NULL 6.730023e-05 4.924114e-04 0.000464684
+--------------------------------------
+
+Variable: soc
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      232636 
+Number of independent variables:  225 
+Mtry:                             40 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             8.324316 
+R squared:                        0.6337795 
+
+ Variable importance:
+                                          [,1]
+sg_soc                             1138549.746
+DEPTH                               781885.650
+PMTGSS7Herbaceous.organic.material   86938.663
+DRNGSS7Subaqueous                    58729.614
+TREL10                               51611.548
+T06MOD3                              48778.130
+SW1L14                               45344.509
+REDL00                               43033.505
+EX1MOD5                              40731.720
+T07PRI5                              39479.938
+C08MCF5                              38370.430
+DVMNED6                              36055.854
+P05PRI5                              35537.764
+SW1L00                               35022.086
+ES2MOD5                              34994.174
+P10PRI5                              34581.453
+P11PRI5                              34136.027
+ES1MOD5                              34101.589
+T05MOD3                              33675.639
+C09MCF5                              33000.629
+CSCMCF5                              32361.826
+ES6MOD5                              32261.927
+T09MOD3                              32040.718
+DEMNED6                              31779.565
+SW2L14                               31271.987
+ES5MOD5                              31172.038
+PDRYCL5                              31053.198
+VDPNED6                              31031.952
+P09PRI5                              30858.415
+C10MCF5                              30817.710
+EX6MOD5                              30759.781
+C06MCF5                              30750.197
+REDL14                               30306.967
+C05MCF5                              30294.559
+P07PRI5                              30180.987
+P04PRI5                              29523.561
+T08MOD3                              29217.630
+PMTGSS7Organic.material              29127.057
+GEXMRD3                              29115.369
+EX2MOD5                              28450.729
+P12PRI5                              28402.233
+ES4MOD5                              28092.925
+EX3MOD5                              27995.408
+TWETCL5                              27809.284
+SW2L00                               27772.408
+P02PRI5                              27631.235
+P08PRI5                              27338.602
+PCLQCL5                              27323.707
+NIRL14                               27229.911
+VBFNED6                              27121.471
+POSNED6                              27114.675
+C11MCF5                              27105.852
+EX4MOD5                              27070.270
+P03PRI5                              26679.972
+ADIUCL5                              26601.351
+C07MCF5                              26559.205
+EX5MOD5                              26428.794
+C02MCF5                              26289.237
+TPINED6                              26242.158
+P06PRI5                              26126.161
+C12MCF5                              26092.016
+T07MOD3                              25767.692
+ES3MOD5                              25715.621
+TDRYCL5                              25566.606
+T06PRI5                              25450.842
+PWETCL5                              25437.183
+P01PRI5                              25063.434
+VDCNED6                              24713.513
+PDRSCL5                              24710.858
+NIRL00                               24329.750
+T08PRI5                              24305.958
+C03MCF5                              24058.642
+T04MOD3                              23792.260
+C01MCF5                              23668.830
+T05PRI5                              23545.877
+MANMCF5                              23476.502
+TNMPRI5                              23335.548
+PWRMCL5                              23278.937
+NEGNED6                              22961.771
+CRVNED6                              22233.379
+C04MCF5                              21447.748
+PSESCL5                              21032.443
+T02PRI5                              20708.721
+GTHMRD3                              20678.520
+TWRMCL5                              20486.737
+T04PRI5                              19868.111
+T01PRI5                              19755.088
+T09PRI5                              18969.543
+T03PRI5                              18784.770
+SLPNED6                              18592.470
+TCLDCL5                              18218.412
+T12PRI5                              18210.992
+T10PRI5                              18076.432
+MRNNED6                              17342.130
+T11PRI5                              17287.352
+TMTPRI5                              16468.075
+PMTGSS7Marl                          16134.484
+NLCD116Woody.Wetlands                14892.605
+T10MOD3                              13148.114
+N01MOD3                              12904.605
+T03MOD3                              12891.245
+N12MOD3                              12773.811
+PMTGSS7Marine.deposits               12172.552
+N02MOD3                              11030.095
+T01MOD3                              10416.455
+N10MOD3                              10052.849
+N05MOD3                               9625.326
+PVEGKT6WETLANDS                       9448.899
+N11MOD3                               9367.098
+T02MOD3                               9227.105
+N07MOD3                               8908.385
+N08MOD3                               8894.552
+T12MOD3                               8659.878
+N06MOD3                               8617.882
+N09MOD3                               8502.057
+N04MOD3                               8335.720
+N03MOD3                               8047.516
+T11MOD3                               7613.834
+BARL10                                6953.965
+GU0MRD3                               6483.085
+PMTGSS7Ablation.till                  5925.282
+PMTGSS7Pumice                         5865.202
+PMTGSS7NULL                           5243.029
+NLCD116Herbaceous.Wetlands            4933.363
+PMTGSS7Basal.till                     4646.647
+GK0MRD3                               3697.873
+DRNGSS7Poor                           3597.587
+PMTGSS7Human.transported.material     3386.662
+NLCD116Evergreen.Forest               3239.584
+NLCD116Deciduous.Forest               3076.604
+DRNGSS7Excessive                      2984.914
+PMTGSS7Rock.spread.deposits           2897.285
+NLCD116Developed.Open.Space           2653.816
+PVEGKT6NORTHERN.HARDWOODS             2404.899
+DRNGSS7Well.drained                   2372.901
+PMTGSS7Eolian.sands                   2226.882
+PVEGKT6SOUTHERN.MIXED.FOREST          2091.760
+PMTGSS7Alluvium                       2024.084
+PMTGSS7Lodgment.till                  1856.716
+NLCD116Pasture                        1798.074
+PMTGSS7Residuum...Slope.Alluvium      1780.234
+NLCD116Shrub                          1755.150
+PVEGKT6EASTERN.HARDWOOD.FOREST        1744.745
+NLCD116Mixed.Forest                   1704.679
+NLCD116Cultivated.Crops               1675.515
+PVEGKT6NORTHERN.CONIFER.FOREST        1577.989
+PVEGKT6FLOODPLAIN.FORESTS             1560.253
+PMTGSS7Pedisediment                   1512.293
+PMTGSS7Fluviomarine.deposits          1414.226
+NLCD116Developed.Low.Intensity        1378.847
+
+eXtreme Gradient Boosting 
+
+232636 samples
+   225 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 155091, 155090, 155091 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared 
+  0.3  2           50      3.421733  0.4856342
+  0.3  2          100      3.369816  0.5008510
+  0.3  2          150      3.336175  0.5107987
+  0.3  3           50      3.319695  0.5157412
+  0.3  3          100      3.239525  0.5389165
+  0.3  3          150      3.194355  0.5515358
+  0.3  4           50      3.220442  0.5444215
+  0.3  4          100      3.128689  0.5696802
+  0.3  4          150      3.078838  0.5831639
+  0.4  2           50      3.422922  0.4848232
+  0.4  2          100      3.362169  0.5029021
+  0.4  2          150      3.328451  0.5128707
+  0.4  3           50      3.291942  0.5234575
+  0.4  3          100      3.229075  0.5413693
+  0.4  3          150      3.178178  0.5556750
+  0.4  4           50      3.210449  0.5466772
+  0.4  4          100      3.129500  0.5691523
+  0.4  4          150      3.079992  0.5827459
+  0.5  2           50      3.399987  0.4916010
+  0.5  2          100      3.349242  0.5066192
+  0.5  2          150      3.312728  0.5172824
+  0.5  3           50      3.280371  0.5267046
+  0.5  3          100      3.215983  0.5450402
+  0.5  3          150      3.164775  0.5594641
+  0.5  4           50      3.219844  0.5440196
+  0.5  4          100      3.147888  0.5644141
+  0.5  4          150      3.115030  0.5740762
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                                Feature         Gain        Cover    Frequency
+  1:                             sg_soc 5.178071e-01 1.644144e-01 0.1285645239
+  2:                              DEPTH 1.271780e-01 9.044852e-02 0.1498308362
+  3:                             TREL10 2.286508e-02 2.381341e-04 0.0077332044
+  4: PMTGSS7Herbaceous.organic.material 2.227802e-02 1.679531e-02 0.0144997583
+  5:                  DRNGSS7Subaqueous 2.011347e-02 2.274349e-03 0.0057999033
+ ---                                                                          
+146:                    PMTGSS7Alluvium 9.935772e-05 5.474956e-05 0.0004833253
+147:         PMTGSS7Lacustrine.deposits 9.682170e-05 2.528997e-06 0.0004833253
+148:                            N10MOD3 9.445417e-05 1.361947e-03 0.0009666506
+149:        PVEGKT6CALIFORNIA.CHAPARRAL 7.859844e-05 5.702781e-06 0.0004833253
+150:          PMTGSS7Estuarine.deposits 6.794765e-05 1.666480e-03 0.0009666506
+--------------------------------------
+
+Variable: bd
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      80036 
+Number of independent variables:  225 
+Mtry:                             50 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             0.02716103 
+R squared:                        0.6236435 
+
+ Variable importance:
+                                            [,1]
+sg_bd                                1325.775670
+DEPTH                                 496.276930
+TWRMCL5                               110.196243
+T06PRI5                                72.480995
+P09PRI5                                60.073539
+DEMNED6                                52.814070
+P10PRI5                                52.410978
+C10MCF5                                51.213462
+TWETCL5                                48.749810
+T05PRI5                                46.973471
+DVMNED6                                45.124641
+P11PRI5                                44.754180
+C09MCF5                                44.117334
+GEXMRD3                                43.657680
+P07PRI5                                43.354121
+VDPNED6                                42.660134
+C08MCF5                                42.492346
+C11MCF5                                42.459148
+C04MCF5                                42.210862
+MANMCF5                                42.144335
+P03PRI5                                41.394087
+P12PRI5                                40.786661
+C07MCF5                                40.268915
+P08PRI5                                40.159856
+C12MCF5                                39.728537
+REDL00                                 39.476398
+VBFNED6                                39.165041
+PMTGSS7Herbaceous.organic.material     38.567027
+P04PRI5                                38.438293
+C01MCF5                                38.435852
+SW1L00                                 38.351084
+P01PRI5                                38.317367
+P06PRI5                                38.273952
+ES2MOD5                                38.180008
+EX6MOD5                                38.123706
+EX1MOD5                                38.063180
+SW1L14                                 38.009526
+DRNGSS7Subaqueous                      37.967915
+ES1MOD5                                37.811464
+ES4MOD5                                37.691009
+ES3MOD5                                37.342103
+ES6MOD5                                37.105362
+C03MCF5                                37.071155
+TPINED6                                36.701571
+PWETCL5                                36.601589
+EX3MOD5                                36.553622
+PWRMCL5                                36.441335
+C05MCF5                                36.236681
+VDCNED6                                35.788042
+C06MCF5                                35.413001
+T07PRI5                                35.265132
+POSNED6                                35.152820
+C02MCF5                                34.959113
+T05MOD3                                34.821999
+P05PRI5                                34.819982
+P02PRI5                                34.769127
+N07MOD3                                34.459967
+EX5MOD5                                34.092397
+ES5MOD5                                33.963608
+REDL14                                 33.624516
+T08PRI5                                33.621786
+EX2MOD5                                32.815543
+PDRYCL5                                32.583670
+EX4MOD5                                32.459420
+CSCMCF5                                32.084503
+PCLQCL5                                31.689654
+NIRL14                                 31.001129
+NEGNED6                                30.786841
+T06MOD3                                30.721675
+ADIUCL5                                29.972021
+PSESCL5                                29.822585
+TREL10                                 29.739263
+TDRYCL5                                29.721196
+NIRL00                                 29.524204
+TNMPRI5                                27.902878
+T09PRI5                                27.283250
+SW2L00                                 26.853861
+T04PRI5                                26.494642
+PDRSCL5                                24.805422
+SLPNED6                                24.683027
+CRVNED6                                24.215089
+N06MOD3                                24.173127
+T01PRI5                                23.283414
+SW2L14                                 23.125654
+T03PRI5                                22.385850
+T07MOD3                                22.378380
+GTHMRD3                                21.847612
+T04MOD3                                21.792149
+T08MOD3                                21.440190
+T12PRI5                                21.410257
+T02PRI5                                21.248862
+TCLDCL5                                20.415563
+T09MOD3                                20.343790
+T11PRI5                                19.952117
+MRNNED6                                19.689753
+T10PRI5                                19.527430
+TMTPRI5                                19.039439
+BARL10                                 13.737569
+T10MOD3                                13.179381
+T03MOD3                                12.532498
+N08MOD3                                12.515249
+N01MOD3                                12.504045
+N05MOD3                                12.102218
+T01MOD3                                11.238621
+N12MOD3                                11.202717
+N02MOD3                                10.845647
+T02MOD3                                10.837405
+T11MOD3                                10.057998
+T12MOD3                                 9.915256
+PVEGKT6WETLANDS                         9.621651
+N09MOD3                                 9.609208
+N10MOD3                                 9.441792
+N04MOD3                                 9.122518
+N11MOD3                                 8.769396
+N03MOD3                                 8.614501
+PMTGSS7Organic.material                 8.441988
+GU0MRD3                                 7.412967
+GK0MRD3                                 7.022663
+NLCD116Herbaceous.Wetlands              5.809047
+DRNGSS7Poor                             5.792787
+DRNGSS7Excessive                        4.876116
+PMTGSS7Basal.till                       4.668425
+DRNGSS7Well.drained                     4.596727
+NLCD116Woody.Wetlands                   3.899288
+PMTGSS7Alluvium                         3.862962
+PMTGSS7Pumice                           3.781533
+PMTGSS7Residuum...Slope.Alluvium        3.669239
+NLCD116Cultivated.Crops                 3.056132
+NLCD116Pasture                          2.568343
+PMTGSS7Eolian.sands                     2.483731
+PMTGSS7Rock.spread.deposits             2.451896
+PMTGSS7Eolian.Deposits..nonvolcanic.    2.379241
+PVEGKT6SOUTHERN.MIXED.FOREST            2.229108
+NLCD116Deciduous.Forest                 2.207804
+PVEGKT6TALL.GRASS.PRAIRIE               2.178668
+PVEGKT6FLOODPLAIN.FORESTS               1.993480
+PMTGSS7Marl                             1.970903
+NLCD116Open.Water                       1.825592
+PMTGSS7NULL                             1.804868
+NLCD116Shrub                            1.790872
+PMTGSS7Colluvium                        1.782673
+NLCD116Evergreen.Forest                 1.735503
+NLCD116Developed.Open.Space             1.649556
+PMTGSS7Ablation.till                    1.610543
+PVEGKT6NORTHERN.HARDWOODS               1.585969
+PMTGSS7Lacustrine.deposits              1.567137
+NLCD116Grassland                        1.562135
+CHAGSW7                                 1.508081
+PVEGKT6EASTERN.HARDWOOD.FOREST          1.477930
+PMTGSS7Marine.deposits                  1.409086
+
+eXtreme Gradient Boosting 
+
+80036 samples
+  225 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 53357, 53357, 53358 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared 
+  0.3  2           50      0.1989530  0.4532515
+  0.3  2          100      0.1949546  0.4744067
+  0.3  2          150      0.1928194  0.4857584
+  0.3  3           50      0.1937600  0.4809373
+  0.3  3          100      0.1891811  0.5048566
+  0.3  3          150      0.1864435  0.5189476
+  0.3  4           50      0.1894915  0.5033231
+  0.3  4          100      0.1842821  0.5299752
+  0.3  4          150      0.1806062  0.5484713
+  0.4  2           50      0.1972540  0.4615446
+  0.4  2          100      0.1936375  0.4809722
+  0.4  2          150      0.1912779  0.4935223
+  0.4  3           50      0.1928180  0.4853178
+  0.4  3          100      0.1880352  0.5103748
+  0.4  3          150      0.1848164  0.5269632
+  0.4  4           50      0.1884451  0.5082880
+  0.4  4          100      0.1828843  0.5366716
+  0.4  4          150      0.1793138  0.5544959
+  0.5  2           50      0.1967572  0.4637702
+  0.5  2          100      0.1930927  0.4835019
+  0.5  2          150      0.1907844  0.4957275
+  0.5  3           50      0.1923023  0.4877480
+  0.5  3          100      0.1874656  0.5130730
+  0.5  3          150      0.1839492  0.5311482
+  0.5  4           50      0.1875080  0.5128874
+  0.5  4          100      0.1818047  0.5420142
+  0.5  4          150      0.1786414  0.5578758
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.5, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                            Feature         Gain        Cover    Frequency
+  1:                          sg_bd 0.5797219687 7.252692e-02 0.0707305724
+  2:                          DEPTH 0.0438573680 6.203064e-02 0.0772452303
+  3:                        C10MCF5 0.0182794981 1.369164e-02 0.0111679851
+  4:              DRNGSS7Subaqueous 0.0141486178 1.313337e-03 0.0032573290
+  5:                        PDRYCL5 0.0107520443 5.200517e-03 0.0069799907
+ ---                                                                      
+146:               PMTGSS7Colluvium 0.0001892141 7.413394e-06 0.0004653327
+147:                PMTGSS7Alluvium 0.0001867168 2.453084e-05 0.0004653327
+148:                        N05MOD3 0.0001782398 5.497573e-06 0.0009306654
+149:        NLCD116Evergreen.Forest 0.0001727796 1.442530e-03 0.0009306654
+150: NLCD116Developed.Low.Intensity 0.0001717090 1.516768e-03 0.0009306654
+--------------------------------------
+
+Variable: n_tot
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      74379 
+Number of independent variables:  224 
+Mtry:                             45 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             0.04762988 
+R squared:                        0.608567 
+
+ Variable importance:
+                                          [,1]
+DEPTH                              1699.070672
+DRNGSS7Subaqueous                   275.783523
+PMTGSS7Herbaceous.organic.material  201.210953
+C10MCF5                             133.896110
+T09MOD3                             116.053775
+TREL10                              105.558245
+PMTGSS7Organic.material              99.442301
+VBFNED6                              97.403313
+DVMNED6                              90.236111
+T08PRI5                              85.875367
+T06MOD3                              84.525310
+REDL00                               83.824622
+DEMNED6                              82.627049
+ES2MOD5                              81.421591
+T08MOD3                              76.043641
+T07MOD3                              75.239395
+PDRYCL5                              73.596453
+ES1MOD5                              72.754699
+C06MCF5                              71.911875
+T05MOD3                              70.463915
+CSCMCF5                              70.157164
+PDRSCL5                              68.961820
+P10PRI5                              68.425398
+MANMCF5                              66.311697
+ES6MOD5                              65.993595
+EX1MOD5                              65.704580
+NIRL14                               65.364266
+P09PRI5                              64.648655
+C05MCF5                              64.325188
+ES4MOD5                              63.012095
+REDL14                               62.357362
+SW1L14                               62.342593
+P08PRI5                              58.818248
+EX3MOD5                              58.553944
+C08MCF5                              58.407074
+POSNED6                              58.324198
+C02MCF5                              58.274745
+C07MCF5                              57.709231
+VDCNED6                              56.656156
+GEXMRD3                              56.403675
+SW2L14                               56.126717
+T07PRI5                              55.847845
+TPINED6                              55.794643
+VDPNED6                              55.604915
+SW1L00                               55.437632
+P04PRI5                              55.315246
+C11MCF5                              55.153776
+SW2L00                               54.136621
+NIRL00                               54.022726
+EX2MOD5                              53.944122
+ES5MOD5                              53.836668
+C04MCF5                              53.816587
+C01MCF5                              53.433323
+P07PRI5                              53.378892
+EX5MOD5                              52.826982
+ES3MOD5                              52.794206
+P06PRI5                              52.461031
+ADIUCL5                              52.449487
+EX4MOD5                              52.409607
+C03MCF5                              52.164767
+C12MCF5                              51.702897
+EX6MOD5                              51.516432
+P05PRI5                              51.317078
+PSESCL5                              51.213105
+PWETCL5                              51.057793
+T06PRI5                              50.340600
+TNMPRI5                              50.312287
+TDRYCL5                              49.666202
+T09PRI5                              48.295199
+TWETCL5                              47.943325
+P11PRI5                              46.369091
+P12PRI5                              46.293165
+C09MCF5                              46.082436
+T05PRI5                              45.542406
+CRVNED6                              44.496784
+NEGNED6                              43.949359
+P03PRI5                              43.922743
+PWRMCL5                              43.124635
+PCLQCL5                              43.065953
+P02PRI5                              42.326025
+PMTGSS7Marl                          42.322497
+T01PRI5                              40.908192
+T03PRI5                              40.602764
+P01PRI5                              40.224844
+T10PRI5                              39.446922
+GTHMRD3                              38.694369
+T02PRI5                              38.597419
+NLCD116Woody.Wetlands                38.139846
+T04PRI5                              35.547221
+TWRMCL5                              35.167408
+T11PRI5                              34.521151
+T12PRI5                              33.486249
+TMTPRI5                              33.421171
+NLCD116Herbaceous.Wetlands           33.157890
+PMTGSS7Pumice                        31.489089
+T10MOD3                              30.588970
+TCLDCL5                              30.315555
+T04MOD3                              29.644576
+N02MOD3                              28.078859
+N01MOD3                              27.629088
+MRNNED6                              27.290029
+SLPNED6                              27.098087
+N12MOD3                              25.928582
+N11MOD3                              25.363283
+T03MOD3                              25.072801
+N09MOD3                              23.280532
+PMTGSS7Marine.deposits               22.791705
+BARL10                               22.568049
+T01MOD3                              22.011747
+GU0MRD3                              21.940364
+N04MOD3                              21.032282
+N10MOD3                              20.608775
+T02MOD3                              20.302979
+N07MOD3                              20.040931
+N06MOD3                              20.033006
+PVEGKT6WETLANDS                      18.889659
+N03MOD3                              18.238137
+N05MOD3                              18.111637
+T12MOD3                              17.938159
+N08MOD3                              17.352013
+T11MOD3                              13.577196
+PMTGSS7Ablation.till                 10.839084
+PMTGSS7Basal.till                    10.640558
+DRNGSS7Poor                          10.120353
+NLCD116Open.Water                     9.650892
+PVEGKT6NORTHERN.HARDWOODS             9.506703
+PMTGSS7Alluvium                       9.069660
+PMTGSS7Pedisediment                   8.862841
+DRNGSS7Well.drained                   7.348366
+GK0MRD3                               7.173707
+PVEGKT6EASTERN.HARDWOOD.FOREST        7.006908
+DRNGSS7Excessive                      6.169110
+NLCD116Cultivated.Crops               6.113248
+NLCD116Deciduous.Forest               5.708822
+CHAGSW7                               4.929206
+OCCGSW7                               4.830471
+PMTGSS7Lodgment.till                  4.694891
+PMTGSS7Eolian.sands                   3.955699
+PMTGSS7NULL                           3.796838
+PMTGSS7Fluviomarine.deposits          3.572614
+NLCD116Developed.Open.Space           3.375339
+PVEGKT6TALL.GRASS.SAVANNA             3.306798
+PVEGKT6NORTHERN.CONIFER.FOREST        3.264083
+NLCD116Evergreen.Forest               3.125213
+NLCD116Shrub                          2.899391
+PMTGSS7Backswamp.deposits             2.870011
+PMTGSS7Rock.spread.deposits           2.792351
+PVEGKT6FLOODPLAIN.FORESTS             2.721680
+PMTGSS7Residuum...Slope.Alluvium      2.624242
+PMTGSS7Outwash                        2.534900
+
+eXtreme Gradient Boosting 
+
+74379 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 49585, 49586, 49587 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared 
+  0.3  2           50      0.2726840  0.3908337
+  0.3  2          100      0.2668234  0.4159801
+  0.3  2          150      0.2631818  0.4313682
+  0.3  3           50      0.2607625  0.4426293
+  0.3  3          100      0.2521322  0.4786909
+  0.3  3          150      0.2459543  0.5036255
+  0.3  4           50      0.2489325  0.4925311
+  0.3  4          100      0.2396875  0.5285831
+  0.3  4          150      0.2338979  0.5506248
+  0.4  2           50      0.2714239  0.3952946
+  0.4  2          100      0.2654848  0.4207967
+  0.4  2          150      0.2609558  0.4404313
+  0.4  3           50      0.2584897  0.4516011
+  0.4  3          100      0.2485245  0.4927812
+  0.4  3          150      0.2425355  0.5168263
+  0.4  4           50      0.2466658  0.5003074
+  0.4  4          100      0.2374249  0.5367306
+  0.4  4          150      0.2321480  0.5570911
+  0.5  2           50      0.2710260  0.3963699
+  0.5  2          100      0.2649279  0.4231569
+  0.5  2          150      0.2602319  0.4432771
+  0.5  3           50      0.2572370  0.4563002
+  0.5  3          100      0.2477596  0.4952951
+  0.5  3          150      0.2420777  0.5182246
+  0.5  4           50      0.2445571  0.5083547
+  0.5  4          100      0.2361569  0.5415800
+  0.5  4          150      0.2320460  0.5582227
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.5, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                                Feature         Gain        Cover    Frequency
+  1:                              DEPTH 0.2398713927 5.750074e-02 0.1650294695
+  2:                  DRNGSS7Subaqueous 0.0808740800 1.217751e-02 0.0127701375
+  3:                            T09MOD3 0.0731414728 3.344147e-03 0.0034381139
+  4: PMTGSS7Herbaceous.organic.material 0.0249243100 6.948139e-03 0.0103143418
+  5:                            T07MOD3 0.0239189373 5.602261e-03 0.0034381139
+ ---                                                                          
+146:   PMTGSS7Mine.spoil.or.earthy.fill 0.0001653220 2.971320e-05 0.0004911591
+147:                            TMTPRI5 0.0001568315 1.560929e-03 0.0009823183
+148:       PVEGKT6SOUTHERN.MIXED.FOREST 0.0001451437 2.789949e-03 0.0009823183
+149:   PMTGSS7Residuum...Slope.Alluvium 0.0001216341 4.683303e-06 0.0004911591
+150:     NLCD116Developed.Low.Intensity 0.0001115832 9.359883e-05 0.0004911591
+--------------------------------------
+
+Variable: ph_h2o
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      200870 
+Number of independent variables:  224 
+Mtry:                             50 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             0.2154856 
+R squared:                        0.8763059 
+
+ Variable importance:
+                                              [,1]
+P11PRI5                                36920.82971
+DEPTH                                  25052.21774
+T07MOD3                                18558.48009
+P04PRI5                                17642.22906
+P12PRI5                                17019.08094
+P03PRI5                                14864.04248
+P10PRI5                                10741.62235
+PCLQCL5                                 8629.90036
+P01PRI5                                 8342.69686
+PDRYCL5                                 6972.67633
+P02PRI5                                 6198.57308
+PWETCL5                                 6158.50412
+PDRSCL5                                 5621.75089
+EX5MOD5                                 5558.69481
+TREL10                                  3798.24082
+P09PRI5                                 3522.69590
+P08PRI5                                 3461.99367
+EX1MOD5                                 3441.41515
+T05MOD3                                 3082.58667
+REDL00                                  3029.52580
+PWRMCL5                                 2935.03447
+P05PRI5                                 2775.68624
+EX6MOD5                                 2710.57474
+SW2L00                                  2550.85090
+VDCNED6                                 2531.23404
+VDPNED6                                 2462.86422
+DEMNED6                                 2453.08497
+P07PRI5                                 2395.74324
+REDL14                                  2373.81527
+T08MOD3                                 2231.84851
+EX3MOD5                                 2147.90152
+C08MCF5                                 2129.55979
+EX2MOD5                                 2077.70224
+C06MCF5                                 2066.94671
+MANMCF5                                 1983.63556
+C07MCF5                                 1906.79329
+ES2MOD5                                 1885.35543
+C05MCF5                                 1848.60882
+VBFNED6                                 1768.34423
+C09MCF5                                 1758.96672
+T09MOD3                                 1732.89668
+DVMNED6                                 1662.12330
+C02MCF5                                 1661.70587
+ES3MOD5                                 1658.09477
+P06PRI5                                 1617.50922
+T06PRI5                                 1598.14867
+C04MCF5                                 1588.83733
+EX4MOD5                                 1576.20478
+ES6MOD5                                 1574.85036
+SW1L00                                  1562.43066
+TPINED6                                 1552.45477
+C01MCF5                                 1549.85400
+T06MOD3                                 1545.29294
+C10MCF5                                 1535.28237
+ES4MOD5                                 1506.63300
+ES1MOD5                                 1460.82435
+C03MCF5                                 1430.23878
+GEXMRD3                                 1415.58929
+ES5MOD5                                 1393.68101
+TWETCL5                                 1366.37860
+SW2L14                                  1366.17305
+C11MCF5                                 1352.92532
+C12MCF5                                 1349.38693
+ADIUCL5                                 1338.58837
+POSNED6                                 1272.78563
+T07PRI5                                 1237.88822
+CSCMCF5                                 1237.25351
+NIRL00                                  1212.74990
+T08PRI5                                 1205.07836
+NEGNED6                                 1203.06385
+TNMPRI5                                 1191.02676
+SW1L14                                  1179.18995
+TWRMCL5                                 1154.53518
+NIRL14                                  1145.78928
+T05PRI5                                 1069.07834
+T12PRI5                                 1032.68344
+TDRYCL5                                 1027.78914
+T01PRI5                                 1016.43135
+T02PRI5                                  982.68748
+PSESCL5                                  980.50729
+PMTGSS7Alluvium                          976.94365
+BARL10                                   961.94006
+T03PRI5                                  959.05948
+T09PRI5                                  954.34493
+T10PRI5                                  921.76314
+T04PRI5                                  908.82963
+TCLDCL5                                  897.35504
+T10MOD3                                  882.97694
+T11PRI5                                  843.15408
+SLPNED6                                  771.11963
+TMTPRI5                                  747.15584
+CRVNED6                                  745.08505
+MRNNED6                                  707.60724
+T04MOD3                                  677.36078
+GTHMRD3                                  570.33929
+T03MOD3                                  492.08713
+N01MOD3                                  487.05043
+N02MOD3                                  426.81576
+T01MOD3                                  423.26050
+N12MOD3                                  414.49603
+T02MOD3                                  413.58638
+T11MOD3                                  408.92597
+T12MOD3                                  374.62136
+N10MOD3                                  368.86551
+N11MOD3                                  363.51341
+N09MOD3                                  361.85835
+N08MOD3                                  358.28844
+N03MOD3                                  346.03338
+N06MOD3                                  342.30547
+N05MOD3                                  341.03423
+N07MOD3                                  328.82706
+NLCD116Cultivated.Crops                  317.03192
+PMTGSS7Eolian.Deposits..nonvolcanic.     309.40520
+N04MOD3                                  293.29976
+PMTGSS7Marine.deposits                   230.91749
+DRNGSS7Poor                              223.86179
+GU0MRD3                                  202.92937
+GK0MRD3                                  188.72094
+DRNGSS7Well.drained                      184.85725
+PVEGKT6EASTERN.HARDWOOD.FOREST           150.30321
+PMTGSS7NULL                              134.56129
+DRNGSS7Excessive                         125.76645
+PMTGSS7Basal.till                        124.47822
+NLCD116Pasture                           110.56544
+PMTGSS7Eolian.sands                      107.86467
+PVEGKT6TALL.GRASS.SAVANNA                104.50799
+PMTGSS7Residuum...Slope.Alluvium          90.03686
+NLCD116Deciduous.Forest                   86.71607
+DRNGSS7Subaqueous                         86.35080
+PVEGKT6FLOODPLAIN.FORESTS                 83.14224
+NLCD116Developed.Open.Space               73.63974
+CHAGSW7                                   70.83355
+OCCGSW7                                   68.84028
+NLCD116Woody.Wetlands                     63.41281
+PMTGSS7Mine.spoil.or.earthy.fill          60.53261
+NLCD116Grassland                          59.60447
+PVEGKT6ROCKY.MTN.CONIFER.FOREST           59.20185
+PVEGKT6TALL.GRASS.PRAIRIE                 58.39982
+NLCD116Evergreen.Forest                   53.09123
+PVEGKT6SOUTHERN.MIXED.FOREST              53.05283
+NLCD116Shrub                              50.30532
+NLCD116Herbaceous.Wetlands                46.86708
+PMTGSS7Lacustrine.deposits                46.42767
+PMTGSS7Colluvium                          46.27267
+PVEGKT6SOUTHEASTERN.SUBTROPICAL.FOREST    42.10713
+NLCD116Developed.Low.Intensity            38.51159
+PMTGSS7Rock.spread.deposits               35.18387
+EXTGSW7                                   35.04532
+PMTGSS7Coal.extraction.mine.spoil         34.70049
+PVEGKT6COASTAL.PRAIRIE                    31.99840
+
+eXtreme Gradient Boosting 
+
+200870 samples
+   224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 133912, 133914, 133914 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared 
+  0.3  2           50      0.8365063  0.5986044
+  0.3  2          100      0.8151753  0.6187848
+  0.3  2          150      0.8027533  0.6303929
+  0.3  3           50      0.8045976  0.6287592
+  0.3  3          100      0.7787400  0.6522760
+  0.3  3          150      0.7612663  0.6677800
+  0.3  4           50      0.7736091  0.6569454
+  0.3  4          100      0.7418906  0.6845639
+  0.3  4          150      0.7198069  0.7031538
+  0.4  2           50      0.8330114  0.6017776
+  0.4  2          100      0.8110118  0.6225549
+  0.4  2          150      0.7960412  0.6364169
+  0.4  3           50      0.7981841  0.6344172
+  0.4  3          100      0.7706682  0.6592427
+  0.4  3          150      0.7515719  0.6759506
+  0.4  4           50      0.7643753  0.6648848
+  0.4  4          100      0.7299494  0.6944036
+  0.4  4          150      0.7068404  0.7135357
+  0.5  2           50      0.8274744  0.6069840
+  0.5  2          100      0.8047674  0.6282752
+  0.5  2          150      0.7902275  0.6416019
+  0.5  3           50      0.7940091  0.6381220
+  0.5  3          100      0.7647371  0.6643537
+  0.5  3          150      0.7453745  0.6811373
+  0.5  4           50      0.7593132  0.6691074
+  0.5  4          100      0.7254993  0.6979215
+  0.5  4          150      0.7003364  0.7185465
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.5, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                             Feature         Gain        Cover    Frequency
+  1:                         P11PRI5 3.968580e-01 0.0123316878 0.0110957004
+  2:                         T07MOD3 8.674690e-02 0.0080312279 0.0064724919
+  3:                         P03PRI5 6.877291e-02 0.0079799175 0.0120203421
+  4:                           DEPTH 5.550573e-02 0.0443832599 0.0892279242
+  5:                         EX1MOD5 3.140628e-02 0.0116490450 0.0171058715
+ ---                                                                       
+146: PVEGKT6SOUTH.MIXED.GRASS.PRARIE 9.590156e-05 0.0012685393 0.0009246417
+147:               NLCD116Open.Water 8.881760e-05 0.0001324081 0.0004623209
+148:                         T11MOD3 8.222795e-05 0.0003200181 0.0004623209
+149: NLCD116Developed.High.Intensity 7.753826e-05 0.0049970090 0.0013869626
+150:          PMTGSS7Subglacial.till 7.414693e-05 0.0013706789 0.0004623209
+--------------------------------------
+
+Variable: ec_12pre
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      11583 
+Number of independent variables:  224 
+Mtry:                             20 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             5.048074 
+R squared:                        0.7418529 
+
+ Variable importance:
+                                           [,1]
+ES2MOD5                              7843.72295
+T07PRI5                              5853.45037
+DEMNED6                              5680.40007
+PSESCL5                              5273.71115
+ADIUCL5                              4724.25565
+TMTPRI5                              4341.45566
+T08PRI5                              4278.48503
+VDPNED6                              3712.03207
+NLCD116Herbaceous.Wetlands           3613.12447
+PCLQCL5                              3495.74276
+DEPTH                                3484.11158
+P08PRI5                              3392.46568
+ES6MOD5                              3312.03584
+EX2MOD5                              3262.99963
+T06PRI5                              3163.28086
+C07MCF5                              2908.53709
+P03PRI5                              2882.02263
+PMTGSS7Herbaceous.organic.material   2808.40068
+P06PRI5                              2708.98415
+P09PRI5                              2656.71805
+P01PRI5                              2621.07465
+N04MOD3                              2519.61834
+T03MOD3                              2391.64779
+T05PRI5                              2341.95667
+TWRMCL5                              2275.50984
+TDRYCL5                              2257.84654
+VDCNED6                              2225.83554
+PDRYCL5                              2194.34136
+OCCGSW7                              2192.15582
+ES4MOD5                              2131.79723
+T12PRI5                              2122.74301
+T09PRI5                              1953.91079
+PWRMCL5                              1930.42740
+TNMPRI5                              1915.71231
+PDRSCL5                              1904.88469
+REDL00                               1843.09691
+P04PRI5                              1807.46032
+P10PRI5                              1787.98083
+REDL14                               1765.65076
+C08MCF5                              1716.66836
+PWETCL5                              1692.42343
+ES1MOD5                              1649.94429
+T02PRI5                              1639.62615
+EX3MOD5                              1638.12106
+P07PRI5                              1557.62973
+T06MOD3                              1552.40584
+C03MCF5                              1545.77256
+VBFNED6                              1524.73645
+C12MCF5                              1516.94756
+DRNGSS7Subaqueous                    1510.31993
+CSCMCF5                              1505.00702
+NIRL14                               1495.64477
+P05PRI5                              1482.62005
+T08MOD3                              1460.77120
+P02PRI5                              1446.82306
+P11PRI5                              1414.15798
+BARL10                               1396.35489
+P12PRI5                              1389.75610
+SW1L14                               1364.88806
+T07MOD3                              1359.89084
+EX5MOD5                              1357.30545
+MANMCF5                              1349.67195
+N07MOD3                              1299.99692
+C05MCF5                              1295.57581
+C09MCF5                              1293.90019
+ES3MOD5                              1291.99590
+N12MOD3                              1274.11037
+C01MCF5                              1257.71902
+T09MOD3                              1248.65292
+GEXMRD3                              1235.99528
+T01PRI5                              1233.96920
+ES5MOD5                              1213.48738
+SW1L00                               1209.96673
+T10PRI5                              1136.01461
+T04PRI5                              1132.36007
+T04MOD3                              1129.84776
+T05MOD3                              1102.83798
+POSNED6                              1094.27385
+EX6MOD5                              1019.66290
+N10MOD3                               966.99725
+TWETCL5                               951.37299
+NIRL00                                937.88015
+T01MOD3                               914.88108
+N01MOD3                               889.10365
+SW2L00                                852.41568
+TCLDCL5                               831.62802
+EX4MOD5                               816.50250
+T03PRI5                               774.77856
+EX1MOD5                               752.63651
+GTHMRD3                               749.42387
+TPINED6                               724.19446
+C04MCF5                               668.56453
+T10MOD3                               642.38767
+C10MCF5                               638.39252
+SW2L14                                636.71381
+N06MOD3                               623.23039
+T11PRI5                               579.38617
+C11MCF5                               566.46353
+DVMNED6                               563.95899
+NEGNED6                               541.61626
+N02MOD3                               517.98268
+C02MCF5                               511.59146
+MRNNED6                               505.21454
+T02MOD3                               502.16040
+T11MOD3                               477.82471
+T12MOD3                               472.04996
+PVEGKT6EASTERN.HARDWOOD.FOREST        444.59353
+DRNGSS7Well.drained                   442.36830
+CRVNED6                               395.03459
+N05MOD3                               391.40979
+C06MCF5                               385.07503
+EXTGSW7                               381.55948
+GU0MRD3                               366.59290
+TREL10                                363.85302
+SLPNED6                               338.17878
+NLCD116Open.Water                     333.31448
+N03MOD3                               321.38804
+DRNGSS7Poor                           298.83117
+PVEGKT6CALIFORNIA.MIXED.EVERGREEN     257.05029
+PMTGSS7NULL                           239.65062
+N11MOD3                               238.84500
+GK0MRD3                               232.10120
+PVEGKT6WETLANDS                       220.09888
+N09MOD3                               211.26779
+N08MOD3                               207.46218
+NLCD116Developed.Medium.Intensity     167.39249
+PMTGSS7Marine.deposits                163.63231
+NLCD116Barren.Land                    159.29452
+PMTGSS7Alluvium                       156.00163
+NLCD116Shrub                          147.54124
+CHAGSW7                               140.08413
+PVEGKT6GREAT.BASIN.GRASSLAND           94.69721
+NLCD116Developed.Low.Intensity         72.93135
+NLCD116Woody.Wetlands                  70.23746
+PMTGSS7Fluviomarine.deposits           56.99299
+PVEGKT6COASTAL.PRAIRIE                 46.56008
+PMTGSS7Lacustrine.deposits             44.82856
+PVEGKT6GREAT.BASIN.SHRUB               43.51319
+PVEGKT6SOUTHERN.MIXED.FOREST           42.53742
+PVEGKT6DESERT.SHRUB                    42.33660
+NLCD116Pasture                         37.86269
+PVEGKT6GREAT.BASIN.SHRUB.STEPPE        29.67686
+PMTGSS7Glaciolacustrine.deposits       29.47178
+PVEGKT6DESERT.STEPPE                   24.46670
+PMTGSS7Residuum...Slope.Alluvium       19.68337
+PVEGKT6TALL.GRASS.PRAIRIE              17.30504
+PMTGSS7Eolian.Deposits..nonvolcanic.   16.75582
+NLCD116Developed.Open.Space            15.29253
+PMTGSS7Volcanic.ash                    13.27457
+PMTGSS7Eolian.sands                    12.92881
+
+eXtreme Gradient Boosting 
+
+11583 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 7723, 7722, 7721 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared 
+  0.3  2           50      2.763932  0.6110835
+  0.3  2          100      2.610052  0.6482056
+  0.3  2          150      2.537287  0.6667655
+  0.3  3           50      2.548837  0.6610927
+  0.3  3          100      2.537228  0.6671349
+  0.3  3          150      2.511287  0.6759260
+  0.3  4           50      2.513175  0.6765852
+  0.3  4          100      2.465899  0.6899855
+  0.3  4          150      2.438675  0.6969241
+  0.4  2           50      2.676574  0.6311725
+  0.4  2          100      2.531569  0.6686271
+  0.4  2          150      2.445032  0.6896136
+  0.4  3           50      2.516220  0.6703865
+  0.4  3          100      2.462216  0.6866139
+  0.4  3          150      2.441866  0.6916410
+  0.4  4           50      2.640979  0.6463438
+  0.4  4          100      2.614919  0.6532720
+  0.4  4          150      2.595518  0.6587638
+  0.5  2           50      2.656944  0.6362727
+  0.5  2          100      2.557773  0.6643217
+  0.5  2          150      2.495520  0.6801782
+  0.5  3           50      2.643715  0.6428922
+  0.5  3          100      2.615854  0.6536392
+  0.5  3          150      2.595712  0.6616158
+  0.5  4           50      2.577922  0.6648313
+  0.5  4          100      2.604632  0.6609053
+  0.5  4          150      2.594903  0.6646934
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                        Feature       Gain       Cover   Frequency
+  1: NLCD116Herbaceous.Wetlands 0.17704450 0.009770985 0.006878307
+  2:                    DEMNED6 0.14524580 0.022850148 0.045502646
+  3:                      DEPTH 0.06452030 0.047498870 0.221693122
+  4:                    P10PRI5 0.06231729 0.014402550 0.008994709
+  5:                    T08PRI5 0.05685380 0.004431676 0.006349206
+ ---                                                              
+146:                         NA         NA          NA          NA
+147:                         NA         NA          NA          NA
+148:                         NA         NA          NA          NA
+149:                         NA         NA          NA          NA
+150:                         NA         NA          NA          NA
+--------------------------------------
+
+Variable: zn_ppm
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      28185 
+Number of independent variables:  224 
+Mtry:                             5 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             6992.54 
+R squared:                        0.06137383 
+
+ Variable importance:
+                                              [,1]
+NIRL00                                 5332509.191
+PMTGSS7Rock.spread.deposits            3912479.606
+T12MOD3                                3847154.257
+GTHMRD3                                3765519.463
+ES3MOD5                                3538455.420
+DEMNED6                                3048097.392
+TWRMCL5                                2943153.998
+SW2L00                                 2741147.309
+GK0MRD3                                2603422.410
+P05PRI5                                2504725.103
+TDRYCL5                                2491936.493
+EX5MOD5                                2346299.799
+C12MCF5                                2344948.971
+C09MCF5                                2161207.972
+PSESCL5                                2073690.550
+P11PRI5                                2015946.964
+P04PRI5                                1975207.619
+P12PRI5                                1949130.737
+C08MCF5                                1937555.560
+EX1MOD5                                1728751.153
+N09MOD3                                1573145.874
+TPINED6                                1561820.407
+ES2MOD5                                1555149.394
+SW1L00                                 1492618.838
+REDL14                                 1403611.942
+REDL00                                 1402572.305
+P08PRI5                                1363238.013
+PWETCL5                                1265126.510
+TMTPRI5                                1258273.447
+ADIUCL5                                1135316.113
+NIRL14                                 1132793.922
+T09PRI5                                1129940.809
+C02MCF5                                1092391.776
+T03PRI5                                 990175.888
+T10MOD3                                 927976.563
+VBFNED6                                 878588.783
+C04MCF5                                 787269.487
+T05PRI5                                 748978.865
+T10PRI5                                 729269.295
+C06MCF5                                 699162.383
+TNMPRI5                                 687440.117
+N10MOD3                                 686514.160
+DEPTH                                   583487.132
+C01MCF5                                 571712.391
+P01PRI5                                 544060.576
+P10PRI5                                 512770.617
+T12PRI5                                 504818.403
+VDPNED6                                 465321.413
+P06PRI5                                 435449.635
+PCLQCL5                                 404511.251
+ES4MOD5                                 403870.966
+C10MCF5                                 399559.004
+C07MCF5                                 396091.101
+CRVNED6                                 390649.130
+TWETCL5                                 382616.707
+T08PRI5                                 382591.904
+C05MCF5                                 347967.300
+T04PRI5                                 346263.397
+GEXMRD3                                 346035.385
+EX4MOD5                                 345323.498
+PDRYCL5                                 343210.051
+N02MOD3                                 342090.152
+T06PRI5                                 340192.771
+NEGNED6                                 340055.742
+PDRSCL5                                 334225.210
+TCLDCL5                                 331426.408
+VDCNED6                                 329849.986
+P07PRI5                                 324346.480
+EX6MOD5                                 323807.992
+CSCMCF5                                 316542.816
+BARL10                                  312209.289
+C03MCF5                                 311368.404
+T11MOD3                                 306649.879
+T02PRI5                                 306136.296
+N06MOD3                                 305006.881
+EX3MOD5                                 302768.229
+DVMNED6                                 301855.680
+ES1MOD5                                 300098.936
+T01PRI5                                 290055.950
+SW1L14                                  288324.749
+N03MOD3                                 284605.392
+C11MCF5                                 281236.758
+T07PRI5                                 270297.410
+P09PRI5                                 264968.593
+EX2MOD5                                 262171.971
+MANMCF5                                 260139.291
+P03PRI5                                 258523.021
+P02PRI5                                 257245.180
+ES6MOD5                                 252275.450
+T11PRI5                                 251702.766
+N07MOD3                                 243864.505
+PWRMCL5                                 241355.574
+T06MOD3                                 240650.335
+ES5MOD5                                 234361.912
+T05MOD3                                 232488.467
+SW2L14                                  223546.803
+T02MOD3                                 222868.304
+T07MOD3                                 220280.126
+T09MOD3                                 219579.467
+T08MOD3                                 218749.663
+SLPNED6                                 199475.280
+T03MOD3                                 198314.135
+N08MOD3                                 189132.014
+POSNED6                                 188724.984
+T01MOD3                                 186945.474
+MRNNED6                                 183041.938
+N04MOD3                                 181094.674
+N05MOD3                                 177555.045
+TREL10                                  176134.475
+N12MOD3                                 174953.503
+N01MOD3                                 171579.792
+GU0MRD3                                 169336.718
+T04MOD3                                 168686.472
+N11MOD3                                 155325.421
+PVEGKT6GREAT.BASIN.SHRUB                 93936.139
+PVEGKT6ALPINE.MEADOW                     86697.777
+PMTGSS7Glaciolacustrine.deposits         84646.902
+NLCD116Evergreen.Forest                  83003.566
+NLCD116Shrub                             68970.572
+NLCD116Deciduous.Forest                  61999.340
+PMTGSS7Eolian.Deposits..nonvolcanic.     56641.138
+PVEGKT6FLOODPLAIN.FORESTS                50737.837
+DRNGSS7Excessive                         43356.716
+PMTGSS7Residuum...Slope.Alluvium         39892.296
+PVEGKT6SHORTGRASS.PRAIRIE                36745.353
+PMTGSS7Alluvium                          35723.592
+DRNGSS7Well.drained                      34180.746
+PMTGSS7Basal.till                        31027.075
+NLCD116Cultivated.Crops                  29544.416
+PVEGKT6EASTERN.HARDWOOD.FOREST           28073.161
+NLCD116Grassland                         25816.885
+NLCD116Developed.Open.Space              25755.938
+PVEGKT6TALL.GRASS.SAVANNA                24890.340
+DRNGSS7Poor                              24783.459
+PMTGSS7Marine.deposits                   22847.189
+PVEGKT6SOUTHEASTERN.SUBTROPICAL.FOREST   19125.795
+NLCD116Woody.Wetlands                    17181.893
+PVEGKT6SOUTHERN.MIXED.FOREST             16562.022
+NLCD116Developed.Low.Intensity           15118.676
+PMTGSS7Colluvium                         14957.462
+NLCD116Pasture                           14827.897
+PMTGSS7NULL                              14483.106
+NLCD116Mixed.Forest                      13425.261
+PVEGKT6ROCKY.MTN.CONIFER.FOREST          13123.374
+PMTGSS7Eolian.sands                      12571.343
+PMTGSS7Fluviomarine.deposits             10393.940
+PVEGKT6TALL.GRASS.PRAIRIE                 8458.578
+PVEGKT6NORTHERN.HARDWOODS                 8245.091
+PVEGKT6GREAT.BASIN.GRASSLAND              6872.090
+PMTGSS7Lodgment.till                      6246.020
+
+eXtreme Gradient Boosting 
+
+28185 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 18791, 18790, 18789 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared  
+  0.3  2           50      100.5234  0.09127269
+  0.3  2          100      104.1106  0.10809762
+  0.3  2          150      104.2461  0.11398225
+  0.3  3           50      107.6534  0.15074388
+  0.3  3          100      107.8299  0.15907079
+  0.3  3          150      107.9856  0.17002726
+  0.3  4           50      106.1449  0.19142448
+  0.3  4          100      107.0945  0.18713932
+  0.3  4          150      107.0434  0.19638995
+  0.4  2           50      106.1120  0.07687037
+  0.4  2          100      107.5820  0.10796197
+  0.4  2          150      108.0008  0.11772233
+  0.4  3           50      107.3405  0.15877097
+  0.4  3          100      107.8221  0.16770838
+  0.4  3          150      107.7093  0.18138219
+  0.4  4           50      107.7811  0.16508698
+  0.4  4          100      109.0265  0.16012656
+  0.4  4          150      108.8027  0.17034883
+  0.5  2           50      102.7915  0.08626055
+  0.5  2          100      107.5366  0.10487334
+  0.5  2          150      107.2426  0.11387859
+  0.5  3           50      105.7916  0.14966574
+  0.5  3          100      105.9685  0.17198222
+  0.5  3          150      105.2115  0.19332881
+  0.5  4           50      107.0000  0.16307705
+  0.5  4          100      106.4465  0.18902576
+  0.5  4          150      106.8053  0.18387459
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 50, max_depth = 2, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+     Feature       Gain        Cover   Frequency
+  1: ADIUCL5 0.45172062 5.392985e-05 0.013698630
+  2:  REDL00 0.19856622 2.306211e-05 0.006849315
+  3:  NIRL00 0.13694763 1.522972e-01 0.143835616
+  4: PWETCL5 0.04252772 9.664798e-04 0.006849315
+  5: TNMPRI5 0.02695897 7.559759e-02 0.054794521
+ ---                                            
+146:      NA         NA           NA          NA
+147:      NA         NA           NA          NA
+148:      NA         NA           NA          NA
+149:      NA         NA           NA          NA
+150:      NA         NA           NA          NA
+--------------------------------------
+
+Variable: mg_pct
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      27998 
+Number of independent variables:  224 
+Mtry:                             15 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             0.4711628 
+R squared:                        0.1803689 
+
+ Variable importance:
+                                           [,1]
+DEPTH                                713.797197
+P08PRI5                              116.823039
+P07PRI5                              107.715003
+P09PRI5                              104.872065
+P06PRI5                              101.204093
+PWRMCL5                               92.705765
+C07MCF5                               92.387302
+EX1MOD5                               91.302908
+PCLQCL5                               91.044761
+CSCMCF5                               90.340923
+P10PRI5                               90.284603
+P03PRI5                               88.449186
+EX2MOD5                               88.204588
+EX3MOD5                               87.986487
+PWETCL5                               87.049489
+C09MCF5                               86.703254
+EX6MOD5                               86.074526
+ES3MOD5                               85.213194
+ES6MOD5                               81.351833
+VDPNED6                               80.081931
+C06MCF5                               79.714241
+P12PRI5                               79.097902
+C08MCF5                               78.959939
+EX4MOD5                               78.285088
+PDRYCL5                               78.036716
+ES4MOD5                               77.671138
+T04PRI5                               76.845333
+P01PRI5                               75.620669
+P02PRI5                               74.809550
+EX5MOD5                               74.396332
+P11PRI5                               74.289038
+ES1MOD5                               74.223538
+DEMNED6                               73.696831
+SW1L14                                73.417426
+P05PRI5                               73.333966
+T07PRI5                               73.107364
+ES5MOD5                               73.072299
+ADIUCL5                               72.997716
+T08PRI5                               72.847554
+POSNED6                               72.816685
+GEXMRD3                               72.675953
+NIRL14                                72.379767
+NIRL00                                70.868984
+VBFNED6                               70.231924
+ES2MOD5                               70.038579
+PSESCL5                               69.416371
+C05MCF5                               68.164947
+TWETCL5                               68.079000
+C02MCF5                               66.917097
+NEGNED6                               66.463682
+T01PRI5                               66.150803
+TNMPRI5                               65.357641
+REDL14                                64.502639
+C11MCF5                               64.427307
+TDRYCL5                               64.346869
+TWRMCL5                               63.921355
+T10PRI5                               63.547738
+SW1L00                                62.863835
+C10MCF5                               62.690498
+REDL00                                62.609279
+C12MCF5                               61.640115
+C01MCF5                               61.382268
+TPINED6                               61.147533
+T06PRI5                               60.529597
+T12PRI5                               59.528055
+P04PRI5                               59.503288
+T02PRI5                               58.720050
+T05PRI5                               58.666678
+SW2L14                                58.529252
+CRVNED6                               57.891300
+DVMNED6                               57.663452
+MANMCF5                               57.590348
+T09PRI5                               57.353768
+C03MCF5                               56.909175
+SW2L00                                55.949423
+C04MCF5                               55.944212
+PDRSCL5                               55.782732
+MRNNED6                               55.295428
+T11PRI5                               55.169386
+VDCNED6                               54.180073
+T03PRI5                               53.846130
+TCLDCL5                               53.497224
+BARL10                                52.374829
+TMTPRI5                               47.784989
+T05MOD3                               43.938541
+GTHMRD3                               42.675973
+SLPNED6                               41.277557
+N02MOD3                               39.004273
+N04MOD3                               38.402679
+T06MOD3                               37.936213
+T12MOD3                               37.692035
+T01MOD3                               37.691915
+N06MOD3                               37.526125
+TREL10                                37.330460
+N07MOD3                               35.819252
+T04MOD3                               35.669089
+N11MOD3                               35.542543
+T02MOD3                               34.388634
+T03MOD3                               34.366475
+T08MOD3                               33.377679
+N01MOD3                               33.233348
+T11MOD3                               33.154937
+T07MOD3                               33.085850
+N08MOD3                               32.313473
+T09MOD3                               30.682008
+T10MOD3                               30.303531
+N10MOD3                               30.015696
+N12MOD3                               28.930025
+N09MOD3                               27.531196
+N05MOD3                               27.362088
+N03MOD3                               26.910858
+GK0MRD3                               22.839307
+GU0MRD3                               20.080408
+NLCD116Cultivated.Crops               10.698306
+PVEGKT6PNW.CONIFER.FOREST              9.922417
+DRNGSS7Poor                            9.728320
+DRNGSS7Well.drained                    8.550692
+PMTGSS7Alluvium                        8.424483
+PMTGSS7Residuum...Slope.Alluvium       7.650229
+NLCD116Woody.Wetlands                  7.574021
+DRNGSS7Excessive                       7.540583
+PVEGKT6FLOODPLAIN.FORESTS              7.260026
+DRNGSS7Subaqueous                      7.026303
+PMTGSS7Colluvium                       6.080920
+NLCD116Grassland                       5.391657
+PMTGSS7Eolian.Deposits..nonvolcanic.   5.134517
+NLCD116Developed.Open.Space            5.122849
+NLCD116Shrub                           4.842445
+PVEGKT6CALIFORNIA.CONIFER.FOREST       4.819259
+PMTGSS7Cinders                         4.550787
+PVEGKT6SOUTHERN.MIXED.FOREST           4.537693
+NLCD116Pasture                         4.521688
+PMTGSS7Basal.till                      4.282424
+PMTGSS7Rock.spread.deposits            4.193175
+PMTGSS7Lacustrine.deposits             3.700180
+NLCD116Mixed.Forest                    3.584322
+PVEGKT6SHORTGRASS.PRAIRIE              3.408829
+PMTGSS7Diatomaceous.earth              3.336763
+PMTGSS7NULL                            3.050938
+PVEGKT6GREAT.BASIN.SHRUB               2.974591
+PVEGKT6TALL.GRASS.SAVANNA              2.968365
+PVEGKT6EASTERN.HARDWOOD.FOREST         2.864239
+NLCD116Developed.Low.Intensity         2.659462
+PVEGKT6GREAT.BASIN.SOUTHWEST.FOREST    2.649054
+PVEGKT6TALL.GRASS.PRAIRIE              2.646699
+PMTGSS7Fluviomarine.deposits           2.379568
+PMTGSS7Eolian.sands                    2.275189
+CHAGSW7                                2.252910
+PMTGSS7Marine.deposits                 2.203371
+NLCD116Deciduous.Forest                2.018743
+
+eXtreme Gradient Boosting 
+
+27998 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 18665, 18666, 18665 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared  
+  0.3  2           50      0.7241024  0.08760878
+  0.3  2          100      0.7184749  0.10129209
+  0.3  2          150      0.7121101  0.11717115
+  0.3  3           50      0.7159573  0.10739878
+  0.3  3          100      0.7077991  0.12799220
+  0.3  3          150      0.7030598  0.14086151
+  0.3  4           50      0.7134520  0.11541234
+  0.3  4          100      0.7065153  0.13673785
+  0.3  4          150      0.7063961  0.14290289
+  0.4  2           50      0.7239036  0.08770458
+  0.4  2          100      0.7144491  0.11132945
+  0.4  2          150      0.7118887  0.11882939
+  0.4  3           50      0.7160257  0.10813875
+  0.4  3          100      0.7087496  0.12868857
+  0.4  3          150      0.7053535  0.14005466
+  0.4  4           50      0.7130054  0.12063529
+  0.4  4          100      0.7122448  0.13392908
+  0.4  4          150      0.7142685  0.13888921
+  0.5  2           50      0.7206630  0.09587343
+  0.5  2          100      0.7141913  0.11322676
+  0.5  2          150      0.7104159  0.12427558
+  0.5  3           50      0.7167014  0.10916622
+  0.5  3          100      0.7102687  0.13064045
+  0.5  3          150      0.7077822  0.14132359
+  0.5  4           50      0.7146626  0.12431512
+  0.5  4          100      0.7178490  0.13507029
+  0.5  4          150      0.7203367  0.13901402
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 3, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+     Feature       Gain       Cover   Frequency
+  1:   DEPTH 0.15566037 0.076548931 0.130089374
+  2: P08PRI5 0.03772149 0.002251301 0.002979146
+  3: P09PRI5 0.03575050 0.011458508 0.008937438
+  4: ADIUCL5 0.03443644 0.013433516 0.009930487
+  5: P07PRI5 0.02611270 0.022683108 0.012909633
+ ---                                           
+146:      NA         NA          NA          NA
+147:      NA         NA          NA          NA
+148:      NA         NA          NA          NA
+149:      NA         NA          NA          NA
+150:      NA         NA          NA          NA
+--------------------------------------
+
+Variable: k_pct
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      28072 
+Number of independent variables:  224 
+Mtry:                             5 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             0.3741417 
+R squared:                        0.3176046 
+
+ Variable importance:
+                                             [,1]
+DEPTH                                  151.461348
+GEXMRD3                                129.028366
+P03PRI5                                117.894080
+DEMNED6                                106.469371
+P09PRI5                                100.812246
+P12PRI5                                 98.981502
+GK0MRD3                                 98.890041
+P07PRI5                                 93.054216
+PCLQCL5                                 92.199404
+EX1MOD5                                 91.865088
+T01PRI5                                 88.042976
+C10MCF5                                 87.862654
+PWRMCL5                                 86.932060
+C09MCF5                                 86.798516
+EX6MOD5                                 86.001557
+PWETCL5                                 83.304675
+P01PRI5                                 79.578516
+ADIUCL5                                 79.022228
+P11PRI5                                 78.107236
+TMTPRI5                                 76.797681
+C07MCF5                                 76.692297
+P06PRI5                                 75.540991
+T12PRI5                                 75.526918
+C08MCF5                                 73.990984
+T08PRI5                                 73.935312
+GTHMRD3                                 73.829180
+CSCMCF5                                 73.334494
+MANMCF5                                 72.771505
+C05MCF5                                 72.679397
+PDRYCL5                                 72.469597
+P04PRI5                                 72.445802
+P05PRI5                                 72.350279
+EX2MOD5                                 72.317987
+C06MCF5                                 72.232394
+EX3MOD5                                 71.916172
+T06PRI5                                 71.488903
+TWETCL5                                 70.921442
+EX4MOD5                                 70.591942
+P08PRI5                                 70.230876
+T03PRI5                                 69.986121
+C11MCF5                                 69.891150
+T04PRI5                                 69.269721
+C01MCF5                                 68.646139
+C03MCF5                                 68.632107
+SW2L00                                  68.420828
+TNMPRI5                                 68.301841
+T02PRI5                                 67.592237
+T05PRI5                                 67.010597
+EX5MOD5                                 66.591118
+T09PRI5                                 66.366247
+TCLDCL5                                 65.380344
+T10PRI5                                 64.835839
+ES5MOD5                                 64.620113
+P10PRI5                                 64.368423
+VDPNED6                                 64.195908
+T01MOD3                                 63.874607
+C02MCF5                                 63.772234
+T11PRI5                                 63.537042
+C04MCF5                                 62.962158
+ES4MOD5                                 62.102190
+C12MCF5                                 61.820867
+ES1MOD5                                 61.534245
+TDRYCL5                                 60.778540
+P02PRI5                                 60.608659
+ES2MOD5                                 60.353348
+ES3MOD5                                 59.523946
+PSESCL5                                 59.357711
+DVMNED6                                 59.210110
+ES6MOD5                                 59.054814
+REDL00                                  58.877396
+TWRMCL5                                 58.612945
+T07PRI5                                 58.400459
+PDRSCL5                                 57.794987
+TPINED6                                 57.259095
+T06MOD3                                 53.908805
+VBFNED6                                 53.276369
+REDL14                                  53.155682
+SW1L00                                  53.028836
+NIRL00                                  53.018274
+SW1L14                                  52.663057
+VDCNED6                                 52.575308
+N12MOD3                                 52.421959
+SW2L14                                  52.338511
+CRVNED6                                 51.796243
+POSNED6                                 51.470423
+NIRL14                                  49.946185
+N01MOD3                                 49.841506
+N09MOD3                                 49.452557
+NEGNED6                                 48.725041
+N05MOD3                                 48.456802
+BARL10                                  46.304848
+T02MOD3                                 46.187785
+N06MOD3                                 46.119517
+N02MOD3                                 45.686773
+N10MOD3                                 45.263385
+GU0MRD3                                 44.718372
+T12MOD3                                 44.661677
+N11MOD3                                 44.397654
+N04MOD3                                 43.720828
+T11MOD3                                 42.635579
+T05MOD3                                 41.705664
+SLPNED6                                 41.300531
+T09MOD3                                 41.085862
+T07MOD3                                 40.739432
+MRNNED6                                 40.643990
+N03MOD3                                 40.256719
+T03MOD3                                 40.060858
+T04MOD3                                 39.575074
+TREL10                                  38.901143
+N08MOD3                                 38.604989
+T08MOD3                                 38.603435
+N07MOD3                                 37.465940
+T10MOD3                                 36.387733
+PMTGSS7Marine.deposits                  14.197058
+PMTGSS7Alluvium                         11.985092
+PVEGKT6SOUTHERN.MIXED.FOREST            11.384687
+NLCD116Pasture                           8.767667
+PMTGSS7Residuum...Slope.Alluvium         8.466276
+DRNGSS7Well.drained                      7.890829
+NLCD116Developed.Open.Space              7.755297
+PMTGSS7Fluviomarine.deposits             7.571562
+DRNGSS7Excessive                         6.849110
+NLCD116Shrub                             6.705596
+PMTGSS7Eolian.Deposits..nonvolcanic.     5.886811
+DRNGSS7Poor                              5.545063
+NLCD116Grassland                         5.413717
+NLCD116Evergreen.Forest                  5.311365
+PVEGKT6FLOODPLAIN.FORESTS                5.213605
+NLCD116Cultivated.Crops                  5.075917
+PVEGKT6SOUTHEASTERN.SUBTROPICAL.FOREST   5.066783
+PMTGSS7Colluvium                         4.521217
+PMTGSS7NULL                              4.065151
+NLCD116Woody.Wetlands                    3.812791
+NLCD116Developed.Low.Intensity           3.618855
+NLCD116Deciduous.Forest                  3.532600
+PVEGKT6DESERT.SHRUB                      3.414241
+PVEGKT6ROCKY.MTN.CONIFER.FOREST          3.391141
+PVEGKT6GREAT.BASIN.SOUTHWEST.FOREST      2.974351
+NLCD116Mixed.Forest                      2.450150
+PMTGSS7Rock.spread.deposits              2.390316
+PMTGSS7Basal.till                        2.333494
+PVEGKT6TALL.GRASS.PRAIRIE                2.295267
+PMTGSS7Lacustrine.deposits               2.284488
+PVEGKT6PNW.CONIFER.FOREST                2.190024
+PVEGKT6SHORTGRASS.PRAIRIE                2.188164
+PVEGKT6GREAT.BASIN.SHRUB                 2.164444
+PVEGKT6EASTERN.HARDWOOD.FOREST           2.127218
+PVEGKT6GREAT.BASIN.SHRUB.STEPPE          2.082825
+PMTGSS7Volcanic.ash                      1.755381
+PVEGKT6TALL.GRASS.SAVANNA                1.755368
+
+eXtreme Gradient Boosting 
+
+28072 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 18715, 18714, 18715 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE       Rsquared 
+  0.3  2           50      0.6795239  0.1592237
+  0.3  2          100      0.6713615  0.1791493
+  0.3  2          150      0.6660317  0.1920123
+  0.3  3           50      0.6678743  0.1884721
+  0.3  3          100      0.6570158  0.2142514
+  0.3  3          150      0.6483629  0.2342267
+  0.3  4           50      0.6568187  0.2150875
+  0.3  4          100      0.6444254  0.2431005
+  0.3  4          150      0.6371567  0.2595786
+  0.4  2           50      0.6766213  0.1660078
+  0.4  2          100      0.6682582  0.1862893
+  0.4  2          150      0.6616750  0.2021383
+  0.4  3           50      0.6640895  0.1966089
+  0.4  3          100      0.6528733  0.2228527
+  0.4  3          150      0.6445183  0.2424006
+  0.4  4           50      0.6556227  0.2161821
+  0.4  4          100      0.6430472  0.2461326
+  0.4  4          150      0.6379676  0.2595777
+  0.5  2           50      0.6759668  0.1669320
+  0.5  2          100      0.6667193  0.1893816
+  0.5  2          150      0.6603404  0.2047079
+  0.5  3           50      0.6630325  0.1982697
+  0.5  3          100      0.6505015  0.2282671
+  0.5  3          150      0.6431193  0.2461666
+  0.5  4           50      0.6546474  0.2184595
+  0.5  4          100      0.6432995  0.2471264
+  0.5  4          150      0.6395020  0.2592765
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+                               Feature         Gain        Cover    Frequency
+  1:                           GEXMRD3 0.1282745223 0.0164855590 0.0146627566
+  2:                           GK0MRD3 0.1006632522 0.0108203830 0.0053763441
+  3:                             DEPTH 0.0725962385 0.0892275027 0.1285434995
+  4:                           TNMPRI5 0.0362608886 0.0049724516 0.0078201369
+  5:                           CSCMCF5 0.0180815108 0.0303403446 0.0175953079
+ ---                                                                         
+146:                  PMTGSS7Colluvium 0.0001775018 0.0008883640 0.0004887586
+147:                    NLCD116Pasture 0.0001755428 0.0016667661 0.0004887586
+148:  PMTGSS7Glaciolacustrine.deposits 0.0001596241 0.0016111914 0.0004887586
+149:         PVEGKT6SHORTGRASS.PRAIRIE 0.0001539786 0.0007660522 0.0004887586
+150: NLCD116Developed.Medium.Intensity 0.0001473736 0.0004559382 0.0004887586
+--------------------------------------
+
+Variable: p_ppm
+Ranger result
+
+Call:
+ ranger(formulaString, data = x, importance = "impurity", write.forest = TRUE,      mtry = t.mrfX$bestTune$mtry, num.trees = 85) 
+
+Type:                             Regression 
+Number of trees:                  85 
+Sample size:                      27917 
+Number of independent variables:  224 
+Mtry:                             15 
+Target node size:                 5 
+Variable importance mode:         impurity 
+OOB prediction error:             191341.4 
+R squared:                        0.2717428 
+
+ Variable importance:
+                                            [,1]
+DEPTH                                317221660.6
+DVMNED6                              137907022.7
+ES5MOD5                               75348719.8
+EX2MOD5                               69155489.4
+ES6MOD5                               59184470.0
+PWRMCL5                               56909997.2
+P09PRI5                               54732019.4
+C01MCF5                               53993203.7
+EX4MOD5                               53904017.7
+C02MCF5                               52242008.8
+EX1MOD5                               51839635.9
+T06PRI5                               51179311.9
+P12PRI5                               50931026.8
+ES1MOD5                               50096843.5
+TPINED6                               47874673.9
+POSNED6                               47503175.4
+C03MCF5                               47207384.2
+C04MCF5                               46873494.8
+EX5MOD5                               44356952.3
+C11MCF5                               43824935.3
+TMTPRI5                               43386429.8
+NIRL00                                43201488.3
+T11PRI5                               42839807.3
+T10PRI5                               42497745.3
+ES4MOD5                               42227307.7
+CRVNED6                               41929746.6
+NEGNED6                               41083337.4
+P03PRI5                               40862825.3
+VDPNED6                               40837602.7
+C07MCF5                               39616556.5
+NIRL14                                39442254.1
+T05PRI5                               37684885.6
+P07PRI5                               37632988.4
+EX6MOD5                               37373886.7
+MANMCF5                               37247714.7
+C12MCF5                               37158329.1
+PWETCL5                               36556202.8
+TWETCL5                               36477952.6
+T03PRI5                               36380691.3
+TDRYCL5                               35612545.4
+T12PRI5                               35602345.2
+P08PRI5                               35242202.8
+GEXMRD3                               34729849.3
+VDCNED6                               34660020.6
+TCLDCL5                               34646734.9
+P01PRI5                               34578957.6
+ADIUCL5                               34555793.5
+PDRYCL5                               34323522.0
+T04PRI5                               34150943.8
+CSCMCF5                               33922221.7
+C10MCF5                               33808434.2
+T08PRI5                               33537168.0
+TNMPRI5                               33536405.9
+C05MCF5                               33011025.2
+P06PRI5                               32732339.6
+ES3MOD5                               32655595.4
+C08MCF5                               32582150.3
+T09PRI5                               32581774.8
+P10PRI5                               31843051.5
+DEMNED6                               31518119.0
+P02PRI5                               31458791.3
+C06MCF5                               30831289.3
+P11PRI5                               30580780.2
+P05PRI5                               30395140.5
+T02PRI5                               30332416.9
+T01PRI5                               30184650.5
+VBFNED6                               30139308.5
+TWRMCL5                               29776826.8
+ES2MOD5                               29725078.0
+C09MCF5                               29162046.8
+EX3MOD5                               28136246.2
+SW1L00                                26715509.5
+T01MOD3                               26621157.2
+SW1L14                                26486967.3
+T07PRI5                               26248339.0
+P04PRI5                               26140922.4
+T02MOD3                               25932248.1
+PCLQCL5                               25292283.0
+T08MOD3                               24974904.9
+PDRSCL5                               24876105.3
+SLPNED6                               24548956.9
+REDL14                                24332716.0
+N01MOD3                               23590335.3
+N11MOD3                               23439425.0
+REDL00                                22844219.0
+T09MOD3                               22549396.2
+PSESCL5                               21528737.3
+N12MOD3                               21126596.8
+SW2L14                                20682510.4
+MRNNED6                               20377038.5
+N08MOD3                               20126025.7
+T12MOD3                               19795549.3
+GTHMRD3                               19565984.9
+SW2L00                                19423320.5
+T10MOD3                               18903426.6
+BARL10                                18014167.5
+T06MOD3                               17843400.8
+N06MOD3                               17696753.4
+N07MOD3                               17559302.3
+N04MOD3                               16785006.1
+T07MOD3                               16534791.3
+TREL10                                16506296.8
+T03MOD3                               16435959.9
+N03MOD3                               16253920.6
+T11MOD3                               15382133.0
+N02MOD3                               15185458.8
+T04MOD3                               15000473.2
+T05MOD3                               14812851.4
+N10MOD3                               14087704.0
+N09MOD3                               13576388.8
+N05MOD3                               12058032.2
+GU0MRD3                                9783936.5
+NLCD116Mixed.Forest                    5875100.0
+GK0MRD3                                4973781.6
+PMTGSS7Residuum...Slope.Alluvium       4247208.2
+PVEGKT6ROCKY.MTN.CONIFER.FOREST        4209204.7
+DRNGSS7Excessive                       3848063.0
+NLCD116Pasture                         3818729.9
+NLCD116Developed.Medium.Intensity      3637886.2
+DRNGSS7Well.drained                    3313195.1
+NLCD116Developed.Open.Space            3258004.5
+PVEGKT6EASTERN.HARDWOOD.FOREST         2603788.4
+NLCD116Evergreen.Forest                2495654.1
+NLCD116Deciduous.Forest                2459455.9
+PMTGSS7Alluvium                        2434158.0
+NLCD116Grassland                       2204055.8
+NLCD116Cultivated.Crops                2148274.8
+PMTGSS7Colluvium                       2014751.1
+PMTGSS7Mine.spoil.or.earthy.fill       1992383.8
+PVEGKT6TALL.GRASS.SAVANNA              1802544.4
+NLCD116Shrub                           1780410.3
+NLCD116Woody.Wetlands                  1728033.4
+PMTGSS7Eolian.Deposits..nonvolcanic.   1609560.7
+DRNGSS7Poor                            1578459.9
+PMTGSS7Eolian.sands                    1573972.0
+PMTGSS7Rock.spread.deposits            1533662.4
+PMTGSS7NULL                            1320250.9
+PVEGKT6WETLANDS                        1276826.3
+PVEGKT6TALL.GRASS.PRAIRIE              1213619.5
+NLCD116Developed.Low.Intensity         1213527.6
+PMTGSS7Outwash                         1117888.8
+PVEGKT6SHORTGRASS.PRAIRIE              1061770.3
+PMTGSS7Glaciolacustrine.deposits       1038922.3
+PMTGSS7Volcanic.ash                    1022196.0
+PVEGKT6GREAT.BASIN.GRASSLAND           1003497.3
+PVEGKT6FLOODPLAIN.FORESTS               927651.6
+PVEGKT6ALPINE.MEADOW                    795630.0
+PMTGSS7Lacustrine.deposits              738213.7
+PVEGKT6SOUTHERN.MIXED.FOREST            707186.8
+PVEGKT6DESERT.STEPPE                    700408.0
+
+eXtreme Gradient Boosting 
+
+27917 samples
+  224 predictors
+
+No pre-processing
+Resampling: Cross-Validated (3 fold, repeated 1 times) 
+Summary of sample sizes: 18611, 18612, 18611 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared 
+  0.3  2           50      481.1236  0.1209289
+  0.3  2          100      476.0576  0.1401144
+  0.3  2          150      466.6129  0.1740737
+  0.3  3           50      470.1648  0.1599693
+  0.3  3          100      460.4088  0.1939884
+  0.3  3          150      456.2697  0.2079684
+  0.3  4           50      464.2785  0.1799132
+  0.3  4          100      455.8933  0.2088914
+  0.3  4          150      451.1651  0.2263209
+  0.4  2           50      477.1692  0.1334408
+  0.4  2          100      468.4973  0.1646303
+  0.4  2          150      463.4677  0.1824686
+  0.4  3           50      465.9642  0.1755981
+  0.4  3          100      458.8244  0.2001202
+  0.4  3          150      456.3752  0.2106698
+  0.4  4           50      465.0737  0.1780018
+  0.4  4          100      457.7387  0.2072895
+  0.4  4          150      454.7233  0.2209865
+  0.5  2           50      475.8636  0.1401260
+  0.5  2          100      468.8339  0.1667791
+  0.5  2          150      464.3318  0.1841402
+  0.5  3           50      467.5251  0.1692758
+  0.5  3          100      459.6388  0.1985889
+  0.5  3          150      453.3872  0.2227247
+  0.5  4           50      459.4149  0.1997543
+  0.5  4          100      453.3525  0.2253934
+  0.5  4          150      451.3368  0.2356517
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning parameter 'colsample_bytree' was
+ held constant at a value of 0.8
+Tuning parameter 'min_child_weight' was held constant at a value of
+ 1
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using  the smallest value.
+The final values used for the model were nrounds = 150, max_depth = 4, eta = 0.3, gamma =
+ 0, colsample_bytree = 0.8, min_child_weight = 1 and subsample = 1. 
+
+ XGBoost variable importance:
+     Feature       Gain       Cover   Frequency
+  1: DVMNED6 0.14853917 0.019388346 0.027599803
+  2:   DEPTH 0.11481866 0.067360919 0.158206013
+  3: EX2MOD5 0.07560354 0.021517040 0.023656974
+  4: DEMNED6 0.03356567 0.019469603 0.043863972
+  5: POSNED6 0.02749827 0.003508518 0.007392804
+ ---                                           
+146:      NA         NA          NA          NA
+147:      NA         NA          NA          NA
+148:      NA         NA          NA          NA
+149:      NA         NA          NA          NA
+150:      NA         NA          NA          NA
+--------------------------------------
