@@ -53,3 +53,11 @@ plot(country, col="darkgrey", lwd=2, cex.main=1.2, main=paste0("NCSS DB (N=", fo
 points(xy.peds, pch=21, bg=alpha("blue", 0.2), cex=.5, col=alpha("black", 0.3))
 dev.off()
 
+## plot in Google Earth:
+## Preview_TAXgg_Haploxeralfs_T3908.jpg
+library(rgdal)
+library(plotKML)
+leg = c("#0000ff", "#0028d7", "#0050af", "#007986", "#00a15e", "#00ca35", "#00f20d", "#1aff00", "#43ff00", "#6bff00", "#94ff00", "#bcff00", "#e5ff00", "#fff200", "#ffca00", "#ffa100", "#ff7900", "#ff5000", "#ff2800", "#ff0000")
+r = readGDAL("/home/tom/data/tt/NASIS/predicted100m/T3908/TAXgg_Haploxeralfs_T3908.tif")
+getwd()
+plotKML(r, colour_scale=leg, png.type = "cairo", png.width = 1500, png.height = 1500, z.lim=c(0,45))
