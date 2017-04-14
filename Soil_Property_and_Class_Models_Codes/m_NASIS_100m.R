@@ -1,5 +1,5 @@
 ## Fit models for USDA GreatGroups, texture classes, and several soil properties using the NASIS points (ca 350,000 with classification and 45,000 points with soil properties)
-## Code by Tom.Hengl@isric.org / points prepared by Amanda Ramcharan (a.m.ramcharan@gmail.com) and Travis Nauman (tnauman@usgs.gov)
+## Code by Tom.Hengl@isric.org / points prepared by Amanda Rachmaran (a.m.ramcharan@gmail.com) and Travis Nauman (tnauman@usgs.gov)
 
 list.of.packages <- c("raster", "rgdal", "nnet", "plyr", "ROCR", "randomForest", "R.utils", "plyr", "parallel", "psych", "mda", "dismo", "snowfall", "hexbin", "lattice", "ranger", "xgboost", "mxnet", "doParallel", "caret", "plotKML")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]

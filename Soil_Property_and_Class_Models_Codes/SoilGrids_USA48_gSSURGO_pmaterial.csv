@@ -1,0 +1,90 @@
+VALUE,COUNT,OBJECTID_1,pmaterial_class,pmaterial_class_f
+1,206168349,4,Alluvium,Alluvium
+2,57837109,17,Colluvium,Colluvium
+3,35194764,35,Eolian deposits,Eolian Deposits (nonvolcanic)
+4,172383090,77,Residuum,Residuum - Slope Alluvium
+5,19569491,36,Eolian sands,Eolian sands
+6,28690586,NULL,NULL,NULL
+7,20118341,95,Slope alluvium,Residuum - Slope Alluvium
+8,7880695,50,Lacustrine deposits,Lacustrine deposits
+9,13082872,106,Volcanic ash,Volcanic ash
+10,2238457,69,Organic material,Organic material
+11,207382,15,Cinders,Cinders
+12,10228187,70,Outwash,Outwash
+13,64922006,102,Till,Basal till
+14,109838,18,Complex landslide deposits,Complex landslide deposits
+15,26947,91,shale,shale
+16,38911,24,Debris flow deposits,Debris flow deposits
+17,81952789,57,Loess,Eolian Deposits (nonvolcanic)
+18,1378425,72,Pedisediment,Pedisediment
+19,145406,60,Mass movement deposits,Mass movement deposits
+20,4734710,47,Herbaceous organic material,Herbaceous organic material
+21,19112855,40,Fluviomarine deposits,Fluviomarine deposits
+22,84890,31,Dredge spoils,Dredge spoils
+23,45567741,58,Marine deposits,Marine deposits
+24,11451019,41,Glaciofluvial deposits,Glaciofluvial deposits
+25,10818757,42,Glaciolacustrine deposits,Glaciolacustrine deposits
+26,198332,67,Mudflow deposits,Mudflow deposits
+27,507901,73,Pumice,Pumice
+28,13170,87,Scoria,Scoria
+29,200158,37,Estuarine deposits,Estuarine deposits
+30,170672,48,Human-transported material,Human-transported material
+31,1430043,2,Ablation till,Ablation till
+32,3210137,14,Calcareous loess,Calcareous loess
+33,6853784,32,Drift,Drift
+34,31028,74,Pyroclastic flow,Pyroclastic flow
+35,124711,52,Lahar deposits,Lahar deposits
+36,4188,23,Debris avalanche deposits,Rock spread deposits
+37,349079,43,Glaciomarine deposits,Glaciomarine deposits
+38,4795,25,Debris slide deposits,Rock spread deposits
+39,1158890,8,Basal till,Basal till
+40,61731,6,Ash flow,Ash flow
+41,4461,85,sandstone,Miscellaneous Deposits
+42,804044,61,Melt-out till,Melt-out till
+43,40538,29,Diatomaceous earth,Diatomaceous earth
+44,10937,66,Mossy organic material,Mossy organic material
+45,15962,19,conglomerate,conglomerate
+46,248244,101,Tephra,Tephra
+47,181257,12,Beach sand,Beach sand
+48,29237,59,Marl,Marl
+49,1000960,64,Mine spoil or earthy fill,Mine spoil or earthy fill
+50,1380848,86,Saprolite,Saprolite
+51,769272,21,Creep deposits,Creep deposits
+52,38340,53,Lateral spread deposits,Lateral spread deposits
+53,912,33,Earth spread deposits,Lateral spread deposits
+54,8021,62,Metal ore extraction mine spoil,Miscellaneous Deposits
+55,133846,34,Earthflow deposits,Earthflow deposits
+56,29936,22,Cryoturbate,Cryoturbate
+57,80949,105,Valley side alluvium,Valley side alluvium
+58,979828,16,Coal extraction mine spoil,Coal extraction mine spoil
+59,3085637,68,Noncalcareous loess,Eolian Deposits (nonvolcanic)
+60,49183,20,Coprogenic material,Coprogenic material
+61,17153,44,Grassy organic material,Grassy organic material
+62,1519399,98,Supraglacial meltout till,Supraglacial meltout till
+63,1205361,99,Supraglacial till,Supraglacial till
+64,6096,28,Diamicton,Miscellaneous Deposits
+65,8441590,56,Lodgment till,Lodgment till
+66,38026,39,Flow till,Flow till
+67,1415227,97,Subglacial till,Subglacial till
+68,15069,51,Lagoonal deposits,Lagoonal deposits
+69,264703,7,Backswamp deposits,Backswamp deposits
+70,54128,45,Greensands,Greensands
+71,15012,54,limestone,limestone
+72,1952,71,Overbank deposits,Miscellaneous Deposits
+73,13884,9,Basaltic volcanic ash,Volcanic Deposits
+74,861,5,Andesitic volcanic ash,Volcanic Deposits
+75,68597,38,Flow deposits,Flow deposits
+76,6486,10,Basic volcanic ash,Volcanic Deposits
+77,40409,3,Acidic volcanic ash,Volcanic Deposits
+78,39492,81,Rockfall deposits,Rockfall deposits
+79,7255,78,Rock spread deposits,Rock spread deposits
+80,1723,65,mixed,Rock spread deposits
+81,29875,82,Rotational earth slide deposits,Rotational earth slide deposits
+82,8282,83,Rotational slide deposits,Rock spread deposits
+83,74958,94,Slide deposits,Slide deposits
+84,4731,96,Solifluction deposits,Debris flow deposits
+85,96809,100,Talus,Talus
+86,10921,80,Rockfall avalanche deposits,Rock spread deposits
+87,58,75,Pyroclastic surge,Volcanic Deposits
+88,21127,92,shale-calcareous,shale-calcareous
+89,1230,26,Debris spread deposits,Debris flow deposits
