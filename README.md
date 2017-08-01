@@ -11,7 +11,7 @@ Summary: These are results of spatial predictions of soil property and soil clas
 
 # Download Maps
 
-All maps are available for download under the [Open Database License (ODbl) v1.0](https://opendatacommons.org/licenses/odbl/) and can be downloaded from https://doi.org/10.18113/S1KW2H without restrictions.
+All maps are available for download under the [Open Database License (ODbl) v1.0](https://opendatacommons.org/licenses/odbl/) and can be downloaded from https://doi.org/10.18113/S1KW2H without restrictions. File names beginning with "TAXgg" are the probability maps (0-100%) of occurrence of the named soil great group for each 100 m pixel; file names with "PSCS" are the probability maps (0-100%) of occurrence of the named modified particle size (inn the control section) for each 100 m pixel. For soil property maps, "sl1", "sl2", "sl3", "sl4", "sl5", "sl6", and "sl7" refers to soil property maps at soil depths 0, 5, 15, 30, 60, 100, and 200 cm respectively. In addition to reported soil properties, preliminary, unvalidated maps of Mg, K, and EC are provided in the dataset at the reported soil depths. 
 
 # Disclaimer
 
