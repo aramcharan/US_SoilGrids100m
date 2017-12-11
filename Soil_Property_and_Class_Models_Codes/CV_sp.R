@@ -1,5 +1,5 @@
-# Cross-validation of soil properties adapted from https://github.com/ISRICWorldSoil/SoilGrids250m/blob/master/grids/cv/cv_functions.R
-#
+## Cross-validation of soil properties adapted from https://github.com/ISRICWorldSoil/SoilGrids250m/blob/master/grids/cv/cv_functions.R
+## Tom.hengl@gmail.com and Amanda Ramcharan <a.m.ramcharan@gmail.com>
 
 list.of.packages <- c("nnet", "plyr", "ROCR", "randomForest", "plyr", "parallel", "psych", "mda", "h2o", "dismo", "grDevices", "snowfall", "hexbin", "lattice", "ranger", "xgboost", "doParallel", "caret")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -10,61 +10,141 @@ if(length(new.packages)) install.packages(new.packages)
 ## Build cross validation function for soil properties:
 ## --------------------------------------------------------------
 
-cv_numeric <- function(formulaString, rmatrix, nfold, idcol, cpus, method="ranger", Log=FALSE){
-  varn = all.vars(formulaString)[1]
-  sel <- dismo::kfold(rmatrix, k=nfold)
-  message(paste("Running ", nfold, "-fold cross validation with model re-fitting method ", method," ...", sep=""))
-  if(nfold > nrow(rmatrix)){
-    stop("'nfold' argument must not exceed total number of points")
+## predict soil properties in parallel:
+predict_parallelP <- function(j, sel, varn, formulaString, rmatrix, idcol, method, cpus, Nsub=1e4, remove_duplicates=FALSE){
+  s.train <- rmatrix[!sel==j,]
+  if(remove_duplicates==TRUE){
+    ## TH: optional - check how does model performs without the knowledge of the 3D dimension
+    sel.dup = !duplicated(s.train[,idcol])
+    s.train <- s.train[sel.dup,]
   }
-  if(missing(cpus)){
+  s.test <- rmatrix[sel==j,]
+  n.l <- dim(s.test)[1]
+  if(missing(Nsub)){ Nsub = length(all.vars(formulaString))*50 }
+  if(Nsub>nrow(s.train)){ Nsub = nrow(s.train) }
+  if(method=="h2o"){
+    ## select only complete point pairs
+    train.hex <- as.h2o(s.train[complete.cases(s.train[,all.vars(formulaString)]),all.vars(formulaString)], destination_frame = "train.hex")
+    gm1 <- h2o.randomForest(y=1, x=2:length(all.vars(formulaString)), training_frame=train.hex) 
+    gm2 <- h2o.deeplearning(y=1, x=2:length(all.vars(formulaString)), training_frame=train.hex)
+    test.hex <- as.h2o(s.test[,all.vars(formulaString)], destination_frame = "test.hex")
+    v1 <- as.data.frame(h2o.predict(gm1, test.hex, na.action=na.pass))$predict
+    gm1.w = gm1@model$training_metrics@metrics$r2
+    v2 <- as.data.frame(h2o.predict(gm2, test.hex, na.action=na.pass))$predict
+    gm2.w = gm2@model$training_metrics@metrics$r2
+    ## mean prediction based on accuracy:
+    pred <- rowSums(cbind(v1*gm1.w, v2*gm2.w))/(gm1.w+gm2.w)
+    gc()
+    h2o.removeAll()
+  }
+  if(method=="caret"){
+    test = s.test[,all.vars(formulaString)]
+    ## tuning parameters:
+    cl <- makeCluster(cpus)
+    registerDoParallel(cl)
+    ctrl <- trainControl(method="repeatedcv", number=3, repeats=1)
+    gb.tuneGrid <- expand.grid(eta = c(0.3,0.4), nrounds = c(50,100), max_depth = 2:3, gamma = 0, colsample_bytree = 0.8, min_child_weight = 1)
+    rf.tuneGrid <- expand.grid(mtry = seq(4,length(all.vars(formulaString))/3,by=2))
+    ## fine-tune RF parameters:
+    t.mrfX <- caret::train(formulaString, data=s.train[sample.int(nrow(s.train), Nsub),], method="rf", trControl=ctrl, tuneGrid=rf.tuneGrid)
+    gm1 <- ranger(formulaString, data=s.train, write.forest=TRUE, mtry=t.mrfX$bestTune$mtry)
+    gm1.w = 1/gm1$prediction.error
+    gm2 <- caret::train(formulaString, data=s.train, method="xgbTree", trControl=ctrl, tuneGrid=gb.tuneGrid)
+    gm2.w = 1/(min(gm2$results$RMSE, na.rm=TRUE)^2)
+    v1 <- predict(gm1, test, na.action=na.pass)$predictions
+    v2 <- predict(gm2, test, na.action=na.pass)
+    pred <- rowSums(cbind(v1*gm1.w, v2*gm2.w))/(gm1.w+gm2.w)
+  }
+  if(method=="ranger"){
+    gm <- ranger(formulaString, data=s.train, write.forest=TRUE, num.trees=85)
+    pred <- predict(gm, s.test, na.action = na.pass)$predictions 
+  }
+  obs.pred <- as.data.frame(list(s.test[,varn], pred))
+  names(obs.pred) = c("Observed", "Predicted")
+  obs.pred[,idcol] <- s.test[,idcol]
+  obs.pred$fold = j
+  return(obs.pred)
+}
+
+cv_numeric <- function(formulaString, rmatrix, nfold, idcol, cpus, method="ranger", Log=FALSE, LLO=TRUE){     
+  varn = all.vars(formulaString)[1]
+  message(paste("Running ", nfold, "-fold cross validation with model re-fitting method ", method," ...", sep=""))
+  if(nfold > nrow(rmatrix)){ 
+    stop("'nfold' argument must not exceed total number of points") 
+  }
+  if(sum(duplicated(rmatrix[,idcol]))>0.5*nrow(rmatrix)){
+    if(LLO==TRUE){
+      ## TH: Leave whole locations out
+      ul <- unique(rmatrix[,idcol])
+      sel.ul <- dismo::kfold(ul, k=nfold)
+      sel <- lapply(1:nfold, function(o){ data.frame(row.names=which(rmatrix[,idcol] %in% ul[sel.ul==o]), x=rep(o, length(which(rmatrix[,idcol] %in% ul[sel.ul==o])))) })
+      sel <- do.call(rbind, sel)
+      sel <- sel[order(as.numeric(row.names(sel))),]
+      message(paste0("Subsetting observations by unique location"))
+    } else {
+      sel <- dismo::kfold(rmatrix, k=nfold, by=rmatrix[,idcol])
+      message(paste0("Subsetting observations by '", idcol, "'"))
+    }
+  } else {
+    sel <- dismo::kfold(rmatrix, k=nfold)
+    message(paste0("Simple subsetting of observations using kfolds"))
+  }
+  if(missing(cpus)){ 
     if(method=="randomForest"){
       cpus = nfold
-    } else {
-      cpus <- parallel::detectCores(all.tests = FALSE, logical = FALSE)
+    } else { 
+      cpus <- parallel::detectCores(all.tests = FALSE, logical = FALSE) 
     }
   }
   if(method=="h2o"){
     out <- list()
-    for(j in 1:nfold){
+    for(j in 1:nfold){ 
       out[[j]] <- predict_parallelP(j, sel=sel, varn=varn, formulaString=formulaString, rmatrix=rmatrix, idcol=idcol, method=method, cpus=1)
     }
   }
   if(method=="caret"){
     out <- list()
-    for(j in 1:nfold){
+    for(j in 1:nfold){ 
       out[[j]] <- predict_parallelP(j, sel=sel, varn=varn, formulaString=formulaString, rmatrix=rmatrix, idcol=idcol, method=method, cpus=cpus)
     }
   }
   if(method=="ranger"){
-    snowfall::sfInit(parallel=TRUE, cpus=cpus)
+    snowfall::sfInit(parallel=TRUE, cpus=ifelse(nfold>cpus, cpus, nfold))
     snowfall::sfExport("predict_parallelP","idcol","formulaString","rmatrix","sel","varn","method")
     snowfall::sfLibrary(package="plyr", character.only=TRUE)
     snowfall::sfLibrary(package="ranger", character.only=TRUE)
-    out <- snowfall::sfLapply(1:nfold, function(j){predict_parallelP(j, sel=sel, varn=varn, formulaString=formulaString, rmatrix=rmatrix, idcol=idcol, method=method, cpus=1)})
+    out <- snowfall::sfLapply(1:nfold, function(j){predict_parallelP(j, sel=sel, varn=varn, formulaString=formulaString, rmatrix=rmatrix, idcol=idcol, method=method)})
     snowfall::sfStop()
   }
   ## calculate mean accuracy:
   out <- plyr::rbind.fill(out)
-  ME = mean(out$Observed - out$Predicted, na.rm=TRUE)
+  ME = mean(out$Observed - out$Predicted, na.rm=TRUE) 
   MAE = mean(abs(out$Observed - out$Predicted), na.rm=TRUE)
   RMSE = sqrt(mean((out$Observed - out$Predicted)^2, na.rm=TRUE))
   ## https://en.wikipedia.org/wiki/Coefficient_of_determination
-  #R.squ ared = 1-sum((out$Observed - out$Predicted)^2, na.rm=TRUE)/(var(out$Observed, na.rm=TRUE)*sum(!is.na(out$Observed)))
+  #R.squared = 1-sum((out$Observed - out$Predicted)^2, na.rm=TRUE)/(var(out$Observed, na.rm=TRUE)*sum(!is.na(out$Observed)))
   R.squared = 1-var(out$Observed - out$Predicted, na.rm=TRUE)/var(out$Observed, na.rm=TRUE)
   if(Log==TRUE){
     ## If the variable is log-normal then logR.squared is probably more correct
     logRMSE = sqrt(mean((log1p(out$Observed) - log1p(out$Predicted))^2, na.rm=TRUE))
     #logR.squared = 1-sum((log1p(out$Observed) - log1p(out$Predicted))^2, na.rm=TRUE)/(var(log1p(out$Observed), na.rm=TRUE)*sum(!is.na(out$Observed)))
     logR.squared = 1-var(log1p(out$Observed) - log1p(out$Predicted), na.rm=TRUE)/var(log1p(out$Observed), na.rm=TRUE)
-    cv.r <- list(out, data.frame(ME=ME, MAE=MAE, RMSE=RMSE, R.squared=R.squared, logRMSE=logRMSE, logR.squared=logR.squared))
+    cv.r <- list(out, data.frame(ME=ME, MAE=MAE, RMSE=RMSE, R.squared=R.squared, logRMSE=logRMSE, logR.squared=logR.squared)) 
   } else {
     cv.r <- list(out, data.frame(ME=ME, MAE=MAE, RMSE=RMSE, R.squared=R.squared))
   }
   names(cv.r) <- c("CV_residuals", "Summary")
   return(cv.r)
+  closeAllConnections()
 }
 
+## correlation plot:
+pfun <- function(x,y, ...){
+  panel.hexbinplot(x,y, ...)  
+  panel.abline(0,1,lty=1,lw=2,col="black")
+  panel.abline(0+RMSE,1,lty=2,lw=2,col="black")
+  panel.abline(0-RMSE,1,lty=2,lw=2,col="black")
+}
 
 ################################################
 ################################################
